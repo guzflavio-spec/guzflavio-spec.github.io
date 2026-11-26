@@ -1,0 +1,399 @@
+<!doctype html>
+<html lang="pt-BR" data-lang="pt">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Flavio Guzmán · AI Portfolio</title>
+<meta name="description" content="Flavio Guzmán — Marketing &amp; CX leader building AI systems that sell: CRM copilots, multi-agent marketing and data products.">
+<meta property="og:title" content="Flavio Guzmán · AI Sales CRM Copilot and other AI deliveries">
+<meta property="og:description" content="AI deliveries ranked by business impact: the pain, the AI, the output, and what it would take without AI.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,650&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#f7f5f0; --surface:#ffffff; --ink:#15171a; --muted:#5d636b; --line:#e4e0d6;
+  --accent:#0f6b4f; --accent-soft:#e3f1ea; --gold:#a8741a; --gold-soft:#f6ecd8;
+  --shadow:0 1px 2px rgba(20,20,20,.04),0 8px 24px rgba(20,20,20,.06);
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --bg:#0f1113; --surface:#171a1d; --ink:#eceae4; --muted:#9aa1a9; --line:#2a2f34;
+    --accent:#4fc59a; --accent-soft:#16302a; --gold:#e0b25c; --gold-soft:#33291a;
+    --shadow:0 1px 2px rgba(0,0,0,.3),0 8px 24px rgba(0,0,0,.35);
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0f1113; --surface:#171a1d; --ink:#eceae4; --muted:#9aa1a9; --line:#2a2f34;
+  --accent:#4fc59a; --accent-soft:#16302a; --gold:#e0b25c; --gold-soft:#33291a;
+  --shadow:0 1px 2px rgba(0,0,0,.3),0 8px 24px rgba(0,0,0,.35);
+}
+*{box-sizing:border-box}
+html,body{margin:0}
+body{background:var(--bg);color:var(--ink);font:16px/1.6 Inter,system-ui,-apple-system,Segoe UI,Roboto,sans-serif;-webkit-font-smoothing:antialiased}
+html[data-lang="pt"] .en, html[data-lang="en"] .pt{display:none !important}
+a{color:var(--accent)}
+.wrap{max-width:1080px;margin:0 auto;padding:0 16px}
+@media (min-width:720px){.wrap{padding:0 32px}}
+
+/* top bar */
+.bar{position:sticky;top:0;z-index:5;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.bar .wrap{display:flex;align-items:center;justify-content:space-between;height:56px;gap:12px}
+.brand{font-weight:700;letter-spacing:.2px;white-space:nowrap}
+.brand span{color:var(--muted);font-weight:500}
+.toggle{display:inline-flex;border:1px solid var(--line);border-radius:999px;overflow:hidden;background:var(--surface)}
+.toggle button{border:0;background:none;color:var(--muted);font:600 13px Inter,sans-serif;padding:6px 12px;cursor:pointer}
+.toggle button[aria-pressed="true"]{background:var(--ink);color:var(--bg)}
+
+/* hero */
+.hero{padding:64px 0 40px}
+.eyebrow{font:600 12px Inter,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:var(--accent)}
+h1{font-family:Fraunces,Georgia,serif;font-weight:650;font-size:clamp(34px,6vw,58px);line-height:1.05;margin:12px 0 18px;letter-spacing:-.01em}
+.lede{font-size:clamp(17px,2.2vw,20px);color:var(--muted);max-width:720px;margin:0}
+.kpis{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:36px}
+@media (min-width:720px){.kpis{grid-template-columns:repeat(4,1fr)}}
+.kpi{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:18px;box-shadow:var(--shadow)}
+.kpi b{display:block;font-family:Fraunces,Georgia,serif;font-size:32px;line-height:1.1;font-weight:650}
+.kpi small{color:var(--muted);font-size:13px;line-height:1.4;display:block;margin-top:4px}
+
+/* section */
+section{padding:40px 0}
+h2{font-family:Fraunces,Georgia,serif;font-weight:650;font-size:clamp(26px,3.6vw,36px);margin:0 0 8px;letter-spacing:-.01em}
+.sub{color:var(--muted);margin:0 0 28px;max-width:720px}
+
+/* featured */
+.feature{background:var(--surface);border:1px solid var(--line);border-radius:20px;box-shadow:var(--shadow);overflow:hidden}
+.feature-head{padding:28px 24px 8px}
+@media (min-width:720px){.feature-head{padding:36px 36px 8px}}
+.badge{display:inline-block;font:600 12px Inter,sans-serif;letter-spacing:.06em;text-transform:uppercase;padding:5px 10px;border-radius:999px;background:var(--gold-soft);color:var(--gold)}
+.badge.live{background:var(--accent-soft);color:var(--accent)}
+.feature h3{font-family:Fraunces,Georgia,serif;font-size:clamp(28px,4.6vw,44px);line-height:1.08;margin:14px 0 6px;font-weight:650}
+.feature .org{color:var(--muted);margin:0}
+
+.flow{display:grid;grid-template-columns:1fr;gap:10px;padding:24px}
+@media (min-width:860px){.flow{grid-template-columns:repeat(5,1fr);padding:28px 36px}}
+.step{position:relative;background:var(--bg);border:1px solid var(--line);border-radius:12px;padding:14px}
+.step i{font-style:normal;font:700 11px Inter,sans-serif;letter-spacing:.1em;color:var(--accent);text-transform:uppercase}
+.step b{display:block;margin:4px 0 2px;font-size:15px}
+.step span{color:var(--muted);font-size:13.5px;line-height:1.45}
+.step.out{background:var(--accent-soft);border-color:transparent}
+@media (min-width:860px){
+  .step:not(:last-child)::after{content:"→";position:absolute;right:-12px;top:50%;transform:translateY(-50%);color:var(--muted);font-size:14px;z-index:1}
+}
+
+.msg{margin:0 24px 8px;border:1px dashed var(--line);border-radius:12px;padding:16px;background:var(--bg)}
+@media (min-width:720px){.msg{margin:0 36px 8px}}
+.msg-top{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-bottom:10px}
+.disc{display:inline-flex;gap:6px}
+.disc button{border:1px solid var(--line);background:var(--surface);color:var(--ink);border-radius:8px;font:700 13px Inter,sans-serif;width:36px;height:32px;cursor:pointer}
+.disc button[aria-pressed="true"]{background:var(--accent);border-color:var(--accent);color:#fff}
+.msg-label{font-size:13px;color:var(--muted)}
+.bubble{background:var(--surface);border:1px solid var(--line);border-radius:12px 12px 12px 4px;padding:12px 14px;font-size:15px;max-width:620px}
+.tone{font-size:13px;color:var(--muted);margin-top:8px}
+
+.four{display:grid;grid-template-columns:1fr;gap:1px;background:var(--line);border-top:1px solid var(--line);margin-top:20px}
+@media (min-width:720px){.four{grid-template-columns:repeat(2,1fr)}}
+.four > div{background:var(--surface);padding:22px 24px}
+@media (min-width:720px){.four > div{padding:24px 36px}}
+.label{font:700 11px Inter,sans-serif;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:8px}
+.four p{margin:0 0 8px}
+.four ul{margin:0;padding-left:18px}
+.four li{margin:3px 0}
+.noai{background:var(--gold-soft) !important}
+.noai .big{font-family:Fraunces,Georgia,serif;font-size:26px;font-weight:650;line-height:1.15;margin-bottom:6px}
+.assume{font-size:13px;color:var(--muted)}
+
+/* cases */
+.cases{display:grid;grid-template-columns:1fr;gap:16px}
+.case{background:var(--surface);border:1px solid var(--line);border-radius:16px;box-shadow:var(--shadow)}
+.case summary{list-style:none;cursor:pointer;padding:20px 22px;display:grid;grid-template-columns:auto 1fr auto;gap:14px;align-items:center}
+.case summary::-webkit-details-marker{display:none}
+.rank{font-family:Fraunces,Georgia,serif;font-size:28px;font-weight:650;color:var(--accent);width:36px}
+.case h3{margin:0;font-size:18px;line-height:1.3}
+.case .meta{color:var(--muted);font-size:14px;margin-top:2px}
+.case .eff{text-align:right;font-size:13px;color:var(--muted);white-space:nowrap}
+.case .eff b{display:block;color:var(--gold);font-size:15px}
+.chev{transition:transform .2s}
+.case[open] .chev{transform:rotate(180deg)}
+.case .four{margin-top:0;border-radius:0 0 16px 16px;overflow:hidden}
+@media (max-width:560px){.case .eff{display:none}}
+
+/* method + contact */
+.method{display:grid;grid-template-columns:1fr;gap:16px}
+@media (min-width:720px){.method{grid-template-columns:repeat(3,1fr)}}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:20px}
+.card h4{margin:0 0 6px;font-size:16px}
+.card p{margin:0;color:var(--muted);font-size:14.5px}
+.stack{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}
+.stack span{border:1px solid var(--line);background:var(--surface);border-radius:999px;padding:5px 12px;font-size:13.5px}
+.cta{background:var(--ink);color:var(--bg);border-radius:20px;padding:32px 24px;display:flex;flex-wrap:wrap;gap:16px;align-items:center;justify-content:space-between}
+@media (min-width:720px){.cta{padding:40px}}
+.cta h2{color:var(--bg);margin:0}
+.cta p{margin:6px 0 0;opacity:.75}
+.btn{display:inline-block;background:var(--bg);color:var(--ink);text-decoration:none;font-weight:600;padding:12px 18px;border-radius:10px}
+footer{color:var(--muted);font-size:13px;padding:28px 0 48px}
+@media print{.bar,.toggle{display:none}.case:not([open]) .four{display:grid}}
+</style>
+</head>
+<body>
+
+<div class="bar">
+  <div class="wrap">
+    <div class="brand">Flavio Guzmán <span>· AI Portfolio</span></div>
+    <div class="toggle" role="group" aria-label="Idioma / Language">
+      <button type="button" data-set="pt" aria-pressed="true">PT</button>
+      <button type="button" data-set="en" aria-pressed="false">EN</button>
+    </div>
+  </div>
+</div>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="eyebrow"><span class="pt">Marketing, CX e IA aplicada</span><span class="en">Marketing, CX and applied AI</span></div>
+    <h1><span class="pt">Eu construo sistemas de IA que vendem.</span><span class="en">I build AI systems that sell.</span></h1>
+    <p class="lede">
+      <span class="pt">Head de Marketing &amp; CX que desenha, testa e coloca em produção copilotos de vendas, agências multiagente e produtos de dados com Claude. Abaixo, cada entrega em quatro partes: a dor, a IA, o resultado e o que custaria sem IA.</span>
+      <span class="en">Head of Marketing &amp; CX who designs, tests and ships sales copilots, multi-agent marketing teams and data products with Claude. Below, each delivery in four parts: the pain, the AI, the output, and what it would take without AI.</span>
+    </p>
+    <div class="kpis">
+      <div class="kpi"><b>7</b><small><span class="pt">entregas com IA, ordenadas por impacto no negócio</span><span class="en">AI deliveries, ranked by business impact</span></small></div>
+      <div class="kpi"><b>100%</b><small><span class="pt">do copiloto de vendas implantado no Salesforce</span><span class="en">of the sales copilot live in Salesforce</span></small></div>
+      <div class="kpi"><b>~60</b><small><span class="pt">pessoas-mês estimadas para fazer o mesmo sem IA*</span><span class="en">estimated person-months to do the same without AI*</span></small></div>
+      <div class="kpi"><b>9</b><small><span class="pt">agentes coordenados numa agência de marketing</span><span class="en">agents coordinated in one marketing agency</span></small></div>
+    </div>
+  </div>
+</header>
+
+<section id="featured">
+  <div class="wrap">
+    <h2><span class="pt">Destaque</span><span class="en">Featured</span></h2>
+    <p class="sub"><span class="pt">Um copiloto que entrega a cada vendedor quem chamar hoje, por que e com qual mensagem.</span><span class="en">A copilot that tells every salesperson who to call today, why, and with which message.</span></p>
+
+    <article class="feature">
+      <div class="feature-head">
+        <span class="badge live"><span class="pt">Em produção</span><span class="en">In production</span></span>
+        <h3>AI Sales CRM Copilot</h3>
+        <p class="org"><span class="pt">Importadora de carros de luxo · Salesforce + Claude · jun–nov 2026</span><span class="en">Luxury car importer · Salesforce + Claude · Jun–Nov 2026</span></p>
+      </div>
+
+      <div class="flow" aria-label="Pipeline">
+        <div class="step"><i>1 · CRM</i><b><span class="pt">Carteira</span><span class="en">Book of business</span></b><span><span class="pt">Leads, contas, oportunidades e tarefas de cada vendedor, direto do Salesforce.</span><span class="en">Each rep's leads, accounts, opportunities and tasks, straight from Salesforce.</span></span></div>
+        <div class="step"><i>2 · DISC</i><b><span class="pt">Perfil do cliente</span><span class="en">Buyer profile</span></b><span><span class="pt">Nota D, I, S e C a partir de prazo, interesse, origem e histórico.</span><span class="en">D, I, S and C score from timing, interest, source and history.</span></span></div>
+        <div class="step"><i>3 · <span class="pt">Mercado</span><span class="en">Market</span></i><b>FENABRAVE</b><span><span class="pt">Emplacamentos da concorrência por estado, cidade e modelo.</span><span class="en">Competitor registrations by state, city and model.</span></span></div>
+        <div class="step"><i>4 · <span class="pt">Estoque</span><span class="en">Stock</span></i><b><span class="pt">Disponibilidade</span><span class="en">Availability</span></b><span><span class="pt">Carros por chassi, reservas e conflitos de alocação.</span><span class="en">Cars by VIN, reservations and allocation conflicts.</span></span></div>
+        <div class="step out"><i><span class="pt">Saída</span><span class="en">Output</span></i><b><span class="pt">Mensagem pronta</span><span class="en">Ready-to-send message</span></b><span><span class="pt">WhatsApp, telefone e e-mail no tom do perfil e nas regras da marca.</span><span class="en">WhatsApp, phone and email in the buyer's tone, within brand rules.</span></span></div>
+      </div>
+
+      <div class="msg" aria-live="polite">
+        <div class="msg-top">
+          <span class="msg-label"><span class="pt">Experimente: mesmo cliente, perfil diferente →</span><span class="en">Try it: same buyer, different profile →</span></span>
+          <div class="disc" role="group" aria-label="DISC">
+            <button type="button" data-disc="D" aria-pressed="true">D</button>
+            <button type="button" data-disc="I" aria-pressed="false">I</button>
+            <button type="button" data-disc="S" aria-pressed="false">S</button>
+            <button type="button" data-disc="C" aria-pressed="false">C</button>
+          </div>
+        </div>
+        <div class="bubble" id="bubble"></div>
+        <div class="tone" id="tone"></div>
+      </div>
+
+      <div class="four">
+        <div>
+          <div class="label"><span class="pt">1 · Dor</span><span class="en">1 · Pain</span></div>
+          <p><span class="pt">Marca de luxo com meta anual agressiva e desconto zero. Os vendedores perdiam leads, registravam mal no CRM e decidiam sozinhos quem chamar, com qual carro e em que tom. A diretoria não tinha visão confiável por vendedor.</span><span class="en">Luxury brand with an aggressive annual target and a zero-discount policy. Reps lost leads, logged poorly in the CRM and decided alone who to call, with which car and in what tone. Leadership had no reliable view per rep.</span></p>
+        </div>
+        <div>
+          <div class="label"><span class="pt">2 · Parte técnica de IA</span><span class="en">2 · The AI</span></div>
+          <ul>
+            <li><span class="pt">Copiloto em HTML que chama o Claude com fichas técnicas, mercado, carteira e regras de marca</span><span class="en">HTML copilot that calls Claude with spec sheets, market data, the rep's book and brand rules</span></li>
+            <li><span class="pt">Agente Agentforce com base de conhecimento em formato RAG</span><span class="en">Agentforce agent with a RAG-style knowledge base</span></li>
+            <li><span class="pt">Lead score nativo de 0 a 100 (Perfil, MEDDICC, Engajamento) e 30+ flows e automações</span><span class="en">Native 0–100 lead score (Fit, MEDDICC, Engagement) and 30+ flows and automations</span></li>
+            <li><span class="pt">Orquestrador de ~12 skills com blueprint em LangGraph e portão de qualidade</span><span class="en">Orchestrator over ~12 skills with a LangGraph blueprint and a quality gate</span></li>
+            <li><span class="pt">Painel diário criptografado (AES-GCM) gerado por tarefa agendada</span><span class="en">Daily encrypted (AES-GCM) board snapshot built by a scheduled job</span></li>
+          </ul>
+        </div>
+        <div>
+          <div class="label"><span class="pt">3 · Resultado</span><span class="en">3 · Output</span></div>
+          <p><span class="pt">100% implantado. Cada vendedor abre o dia com a lista priorizada, o perfil do cliente, o argumento de mercado e a mensagem pronta. Uma auditoria automática de pedidos achou um risco financeiro de sete dígitos em sinais sem confirmação e conflitos de alocação de carro, e propôs as regras de validação.</span><span class="en">100% live. Every rep starts the day with a prioritized list, the buyer's profile, the market angle and a ready message. An automated order audit surfaced a seven-figure exposure in unconfirmed deposits plus car-allocation conflicts, and proposed the validation rules.</span></p>
+        </div>
+        <div class="noai">
+          <div class="label"><span class="pt">4 · Sem IA (estimativa)</span><span class="en">4 · Without AI (estimate)</span></div>
+          <div class="big"><span class="pt">5 pessoas · 5 a 7 meses</span><span class="en">5 people · 5–7 months</span></div>
+          <p class="assume"><span class="pt">Premissa: consultor Salesforce, analista de BI, ops de vendas, dev front-end e redator, mesmo escopo. Só as mensagens por perfil, à mão, seriam 30+ horas por rodada de contatos (~390 leads × 5 min).</span><span class="en">Assumption: Salesforce consultant, BI analyst, sales ops, front-end dev and copywriter, same scope. Hand-writing profile-based messages alone would take 30+ hours per outreach round (~390 leads × 5 min).</span></p>
+        </div>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section id="cases">
+  <div class="wrap">
+    <h2><span class="pt">Outras entregas</span><span class="en">More deliveries</span></h2>
+    <p class="sub"><span class="pt">Ordenadas por impacto no negócio. Toque para abrir as quatro partes.</span><span class="en">Ranked by business impact. Tap to open the four parts.</span></p>
+
+    <div class="cases">
+
+      <details class="case">
+        <summary>
+          <div class="rank">2</div>
+          <div><h3><span class="pt">ERP/CRM para um ateliê artesanal</span><span class="en">ERP/CRM for a handmade studio</span></h3><div class="meta"><span class="pt">Gestão e automação · em testes com clientes fictícios</span><span class="en">Operations and automation · in testing with mock clients</span></div></div>
+          <div class="eff"><b><span class="pt">3 pessoas · 2–3 meses</span><span class="en">3 people · 2–3 mo</span></b><span class="pt">sem IA</span><span class="en">without AI</span></div>
+        </summary>
+        <div class="four">
+          <div><div class="label"><span class="pt">Dor</span><span class="en">Pain</span></div><p><span class="pt">Negócio de uma artesã, com peças únicas vendidas por Instagram e WhatsApp, sem controle de funil, estoque, preço nem pós-venda.</span><span class="en">A one-person studio selling one-off pieces via Instagram and WhatsApp, with no control of funnel, stock, pricing or after-sales.</span></p></div>
+          <div><div class="label"><span class="pt">IA</span><span class="en">AI</span></div><p><span class="pt">Painel de 7 módulos (funil MEDDIC, dossiê 360°, BI, preço e margem, estoque duplo). Extração de contato a partir de DMs e recibos, perfil DISC pelo texto, webhooks de pagamento e jornada D+1 a D+90 em Apps Script.</span><span class="en">7-module dashboard (MEDDIC funnel, 360° dossier, BI, pricing and margin, dual inventory). Contact extraction from DMs and receipts, DISC profile from text, payment webhooks and a D+1 to D+90 journey in Apps Script.</span></p></div>
+          <div><div class="label"><span class="pt">Resultado</span><span class="en">Output</span></div><p><span class="pt">Processo de empresa grande num negócio de uma pessoa: venda fecha e baixa estoque sozinha, consolidado semanal com KPIs e scripts por cliente.</span><span class="en">Enterprise-grade process in a one-person business: a sale closes and updates stock on its own, plus a weekly report with KPIs and per-client scripts.</span></p></div>
+          <div class="noai"><div class="label"><span class="pt">Sem IA</span><span class="en">Without AI</span></div><p class="assume"><span class="pt">Dev full-stack, consultor de CRM e designer por 2 a 3 meses, depois um assistente de meio período.</span><span class="en">Full-stack dev, CRM consultant and designer for 2–3 months, then a part-time assistant.</span></p></div>
+        </div>
+      </details>
+
+      <details class="case">
+        <summary>
+          <div class="rank">3</div>
+          <div><h3><span class="pt">Agência de marketing com 9 agentes</span><span class="en">9-agent marketing agency</span></h3><div class="meta"><span class="pt">Multiagente · 1ª campanha em andamento</span><span class="en">Multi-agent · first campaign in progress</span></div></div>
+          <div class="eff"><b><span class="pt">5–8 pessoas</span><span class="en">5–8 people</span></b><span class="pt">fee mensal sem IA</span><span class="en">monthly retainer without AI</span></div>
+        </summary>
+        <div class="four">
+          <div><div class="label"><span class="pt">Dor</span><span class="en">Pain</span></div><p><span class="pt">Sem time de marketing e com R$ 300 por mês de mídia, o negócio precisava de ideias não óbvias, voz de marca consistente e cadência semanal.</span><span class="en">No marketing team and a R$ 300/month media budget, yet the business needed non-obvious ideas, a consistent brand voice and a weekly cadence.</span></p></div>
+          <div><div class="label"><span class="pt">IA</span><span class="en">AI</span></div><p><span class="pt">9 subagentes (estratégia, criação, conteúdo, arte, mídia, RP, CRM, dados e crivo), 6 skills próprias, guia de marca único e ciclo de 9 etapas com portão de qualidade (nota mínima 9,0).</span><span class="en">9 sub-agents (strategy, creative, content, art, media, PR, CRM, data and review), 6 custom skills, a single brand guide and a 9-step cycle with a quality gate (minimum score 9.0).</span></p></div>
+          <div><div class="label"><span class="pt">Resultado</span><span class="en">Output</span></div><p><span class="pt">Agência instalável com cadências semanal, mensal e sazonal. A primeira peça, um vídeo de campanha com voz gerada na ElevenLabs, está pronta e aprovada.</span><span class="en">An installable agency with weekly, monthly and seasonal cadences. The first asset, a campaign video with an ElevenLabs voice, is done and approved.</span></p></div>
+          <div class="noai"><div class="label"><span class="pt">Sem IA</span><span class="en">Without AI</span></div><p class="assume"><span class="pt">Estrategista e diretor de criação por 4 a 6 semanas para montar; uma agência de 5 a 8 pessoas para operar.</span><span class="en">Strategist and creative director for 4–6 weeks to set up; a 5–8 person agency to run it.</span></p></div>
+        </div>
+      </details>
+
+      <details class="case">
+        <summary>
+          <div class="rank">4</div>
+          <div><h3><span class="pt">Motor de sinais quantitativos</span><span class="en">Quant signal engine</span></h3><div class="meta"><span class="pt">Pesquisa quantitativa e alertas ao vivo · ~18 mil linhas de Python</span><span class="en">Quant research and live alerts · ~18k lines of Python</span></div></div>
+          <div class="eff"><b><span class="pt">3 pessoas · 4–6 meses</span><span class="en">3 people · 4–6 mo</span></b><span class="pt">sem IA</span><span class="en">without AI</span></div>
+        </summary>
+        <div class="four">
+          <div><div class="label"><span class="pt">Dor</span><span class="en">Pain</span></div><p><span class="pt">Uma versão anterior, feita em outra ferramenta, tinha 37 de 143 testes falhando e um erro de backtest que inflava resultados.</span><span class="en">A previous version, built with another tool, had 37 of 143 tests failing and a backtest bug that inflated results.</span></p></div>
+          <div><div class="label"><span class="pt">IA</span><span class="en">AI</span></div><p><span class="pt">Claude Code construiu dados de 2015 a 2026, simulação candle a candle sem olhar o futuro, validação 70/30 com t ≥ 2,4, pré-registro de regras, ~10 mil combinações com Deflated Sharpe e custos reais de spread.</span><span class="en">Claude Code built 2015–2026 data, candle-by-candle simulation with no look-ahead, 70/30 validation with t ≥ 2.4, pre-registered rules, ~10k combinations with Deflated Sharpe and real spread costs.</span></p></div>
+          <div><div class="label"><span class="pt">Resultado</span><span class="en">Output</span></div><p><span class="pt">Sistema ao vivo com painel e alertas. Nenhuma estratégia passou nos testes, e por isso nenhum dinheiro foi para uma estratégia que só parecia boa no papel.</span><span class="en">Live system with dashboard and alerts. No strategy passed the tests, so no money went into a strategy that only looked good on paper.</span></p></div>
+          <div class="noai"><div class="label"><span class="pt">Sem IA</span><span class="en">Without AI</span></div><p class="assume"><span class="pt">Dev quant, engenheiro de dados e pesquisador por 4 a 6 meses, com o mesmo rigor. Com IA: cerca de 8 dias de calendário.</span><span class="en">Quant dev, data engineer and researcher for 4–6 months at the same rigor. With AI: about 8 calendar days.</span></p></div>
+        </div>
+      </details>
+
+      <details class="case">
+        <summary>
+          <div class="rank">5</div>
+          <div><h3><span class="pt">Relatório de mercado premium</span><span class="en">Premium market report</span></h3><div class="meta"><span class="pt">BI e visualização · importadora de carros de luxo</span><span class="en">BI and visualization · luxury car importer</span></div></div>
+          <div class="eff"><b><span class="pt">2 pessoas · 1–2 semanas</span><span class="en">2 people · 1–2 wk</span></b><span class="pt">sem IA</span><span class="en">without AI</span></div>
+        </summary>
+        <div class="four">
+          <div><div class="label"><span class="pt">Dor</span><span class="en">Pain</span></div><p><span class="pt">Entender a concorrência premium todo mês a partir de um export de BI, sem analista dedicado.</span><span class="en">Read the premium competitive market every month from a BI export, with no dedicated analyst.</span></p></div>
+          <div><div class="label"><span class="pt">IA</span><span class="en">AI</span></div><p><span class="pt">Claude leu 560 registros, calculou variação mensal, concentração por cidade e participação por marca, detectou um emplacamento em lote anômalo e gerou relatório HTML e dashboard React.</span><span class="en">Claude read 560 records, computed month-over-month change, city concentration and brand share, flagged an anomalous fleet registration and produced an HTML report and React dashboard.</span></p></div>
+          <div><div class="label"><span class="pt">Resultado</span><span class="en">Output</span></div><p><span class="pt">Achados prontos para decisão, incluindo um mercado regional surpresa fora do eixo Rio–SP.</span><span class="en">Decision-ready findings, including a surprise regional market outside the Rio–São Paulo axis.</span></p></div>
+          <div class="noai"><div class="label"><span class="pt">Sem IA</span><span class="en">Without AI</span></div><p class="assume"><span class="pt">Analista de BI e dev front-end por 1 a 2 semanas, a cada mês.</span><span class="en">BI analyst and front-end dev for 1–2 weeks, every month.</span></p></div>
+        </div>
+      </details>
+
+      <details class="case">
+        <summary>
+          <div class="rank">6</div>
+          <div><h3><span class="pt">App de estudo gamificado e personalizado</span><span class="en">Personalized, gamified study app</span></h3><div class="meta"><span class="pt">EdTech · uso familiar</span><span class="en">EdTech · family use</span></div></div>
+          <div class="eff"><b><span class="pt">3 pessoas · 3–4 semanas</span><span class="en">3 people · 3–4 wk</span></b><span class="pt">sem IA</span><span class="en">without AI</span></div>
+        </summary>
+        <div class="four">
+          <div><div class="label"><span class="pt">Dor</span><span class="en">Pain</span></div><p><span class="pt">Uma aluna do 7º ano com 5 provas em 9 dias, precisando de foco e de vontade de estudar.</span><span class="en">A 7th grader with 5 exams in 9 days who needed focus and motivation.</span></p></div>
+          <div><div class="label"><span class="pt">IA</span><span class="en">AI</span></div><p><span class="pt">Apps HTML de arquivo único mapeados na apostila: roteiro em blocos de 20 min, cartões, quiz, caderno digital, leitura em voz alta e álbum de figurinhas com os temas que ela gosta.</span><span class="en">Single-file HTML apps mapped to the textbook: 20-minute study blocks, flashcards, quizzes, a digital notebook, read-aloud and a sticker album themed on her interests.</span></p></div>
+          <div><div class="label"><span class="pt">Resultado</span><span class="en">Output</span></div><p><span class="pt">Uma central e 5 matérias, cada uma ligada à data da prova, com progresso salvo.</span><span class="en">A hub and 5 subjects, each tied to its exam date, with saved progress.</span></p></div>
+          <div class="noai"><div class="label"><span class="pt">Sem IA</span><span class="en">Without AI</span></div><p class="assume"><span class="pt">Pedagogo, dev front-end e ilustrador por 3 a 4 semanas por rodada de provas.</span><span class="en">Educator, front-end dev and illustrator for 3–4 weeks per exam round.</span></p></div>
+        </div>
+      </details>
+
+      <details class="case">
+        <summary>
+          <div class="rank">7</div>
+          <div><h3><span class="pt">Agente de diagnóstico empresarial</span><span class="en">Business diagnostic agent</span></h3><div class="meta"><span class="pt">Consultoria estratégica · protótipo</span><span class="en">Strategy consulting · prototype</span></div></div>
+          <div class="eff"><b><span class="pt">3–4 consultores · 4–6 sem.</span><span class="en">3–4 consultants · 4–6 wk</span></b><span class="pt">sem IA</span><span class="en">without AI</span></div>
+        </summary>
+        <div class="four">
+          <div><div class="label"><span class="pt">Dor</span><span class="en">Pain</span></div><p><span class="pt">Pequenas empresas não podem pagar um diagnóstico de consultoria estratégica.</span><span class="en">Small businesses cannot afford a strategy-consulting diagnostic.</span></p></div>
+          <div><div class="label"><span class="pt">IA</span><span class="en">AI</span></div><p><span class="pt">Subagente com pirâmide de Minto, MECE e hipóteses; separa fato, inferência e suposição; 4 fases, 12 dimensões, SWOT/TOWS e roadmap 30-60-90.</span><span class="en">Sub-agent using the Minto pyramid, MECE and hypothesis-driven work; labels fact, inference and assumption; 4 phases, 12 dimensions, SWOT/TOWS and a 30-60-90 roadmap.</span></p></div>
+          <div><div class="label"><span class="pt">Resultado</span><span class="en">Output</span></div><p><span class="pt">Agente pronto. No primeiro teste, sem dados públicos da empresa, marcou o diagnóstico como de baixa confiança em vez de inventar números.</span><span class="en">Agent ready. In its first test, with no public data on the company, it flagged the diagnostic as low-confidence instead of inventing numbers.</span></p></div>
+          <div class="noai"><div class="label"><span class="pt">Sem IA</span><span class="en">Without AI</span></div><p class="assume"><span class="pt">3 a 4 consultores por 4 a 6 semanas, a cada diagnóstico.</span><span class="en">3–4 consultants for 4–6 weeks, per diagnostic.</span></p></div>
+        </div>
+      </details>
+
+    </div>
+  </div>
+</section>
+
+<section id="method">
+  <div class="wrap">
+    <h2><span class="pt">Como leio cada número</span><span class="en">How to read the numbers</span></h2>
+    <div class="method">
+      <div class="card"><h4><span class="pt">Estimativa, não medição</span><span class="en">Estimate, not measurement</span></h4><p><span class="pt">*"Sem IA" supõe profissionais competentes no Brasil, 40 h por semana, sem ferramentas de IA, para o mesmo resultado. Não inclui o tempo de aprender o negócio.</span><span class="en">*"Without AI" assumes competent professionals in Brazil, 40 h/week, no AI tools, delivering the same result. It excludes time to learn the business.</span></p></div>
+      <div class="card"><h4><span class="pt">Status honesto</span><span class="en">Honest status</span></h4><p><span class="pt">Cada entrega diz se está em produção, em teste ou em protótipo. Resultado negativo também conta como resultado.</span><span class="en">Each delivery states whether it is live, in testing or a prototype. A negative result still counts as a result.</span></p></div>
+      <div class="card"><h4><span class="pt">Confidencialidade</span><span class="en">Confidentiality</span></h4><p><span class="pt">Nomes de clientes, valores de pipeline e dados internos foram omitidos ou arredondados.</span><span class="en">Client names, pipeline values and internal data are omitted or rounded.</span></p></div>
+    </div>
+    <div class="stack" aria-label="Stack">
+      <span>Claude · Claude Code</span><span>Salesforce · Agentforce</span><span>Journey Builder</span><span>LangGraph</span><span>Python</span><span>Apps Script</span><span>React · HTML</span><span>ElevenLabs</span><span>MCP</span><span>DISC · MEDDICC</span>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap">
+    <div class="cta">
+      <div>
+        <h2><span class="pt">Vamos conversar?</span><span class="en">Let's talk</span></h2>
+        <p><span class="pt">Posso mostrar qualquer uma dessas entregas ao vivo.</span><span class="en">Happy to demo any of these live.</span></p>
+      </div>
+      <!-- Para adicionar LinkedIn ou e-mail, copie a linha abaixo e troque o href. -->
+      <a class="btn" href="https://github.com/guzflavio-spec" rel="noopener">GitHub</a>
+    </div>
+    <footer><span class="pt">Atualizado em novembro de 2026.</span><span class="en">Updated November 2026.</span></footer>
+  </div>
+</section>
+
+<script>
+(function(){
+  var root=document.documentElement;
+  var MSG={
+    pt:{
+      D:["Olá, [Nome]. Duas unidades do [modelo] foram destinadas ao Brasil nesta safra e uma combina com o que você busca. Fecho um horário com você amanhã?","Tom D (Dominante): direto, exclusividade e próximo passo já."],
+      I:["Olá, [Nome]! Lembrei de você: estamos reunindo um grupo pequeno de clientes para viver o [modelo] na pista. É uma comunidade com décadas de história. Vem com a gente?","Tom I (Influente): experiência, história e comunidade."],
+      S:["Olá, [Nome], tudo bem? Sem pressa: quando for bom para você, posso mostrar o [modelo] com calma e tirar todas as dúvidas sobre garantia e manutenção.","Tom S (Estável): sem pressão, confiança e longo prazo."],
+      C:["Olá, [Nome]. Preparei um comparativo objetivo: [modelo] contra o SUV que você tem hoje, com potência, autonomia, 0–100 e valor residual. Posso enviar o PDF?","Tom C (Consciente): dados, specs e comparativos."]
+    },
+    en:{
+      D:["Hi [Name]. Two [model] units were allocated to Brazil this season and one matches what you want. Can I lock in a time with you tomorrow?","D tone (Dominant): direct, exclusivity, next step now."],
+      I:["Hi [Name]! You came to mind: we're gathering a small group of clients to experience the [model] on track. It's a community with decades of history. Join us?","I tone (Influential): experience, story and community."],
+      S:["Hi [Name], how are you? No rush: whenever suits you, I can walk you through the [model] calmly and answer every question on warranty and service.","S tone (Steady): no pressure, trust, long term."],
+      C:["Hi [Name]. I put together an objective comparison: [model] vs. the SUV you drive today, covering power, range, 0–100 and residual value. Shall I send the PDF?","C tone (Conscientious): data, specs and comparisons."]
+    }
+  };
+  var disc="D";
+  function lang(){return root.getAttribute("data-lang")||"pt";}
+  function render(){
+    var m=MSG[lang()][disc];
+    document.getElementById("bubble").textContent=m[0];
+    document.getElementById("tone").textContent=m[1];
+  }
+  function setLang(l){
+    root.setAttribute("data-lang",l);
+    root.setAttribute("lang",l==="en"?"en":"pt-BR");
+    document.querySelectorAll("[data-set]").forEach(function(b){b.setAttribute("aria-pressed",String(b.getAttribute("data-set")===l));});
+    try{localStorage.setItem("fg-lang",l);}catch(e){}
+    render();
+  }
+  document.querySelectorAll("[data-set]").forEach(function(b){b.addEventListener("click",function(){setLang(b.getAttribute("data-set"));});});
+  document.querySelectorAll("[data-disc]").forEach(function(b){
+    b.addEventListener("click",function(){
+      disc=b.getAttribute("data-disc");
+      document.querySelectorAll("[data-disc]").forEach(function(x){x.setAttribute("aria-pressed",String(x===b));});
+      render();
+    });
+  });
+  var saved=null;
+  try{saved=localStorage.getItem("fg-lang");}catch(e){}
+  if(!saved){saved=(navigator.language||"pt").toLowerCase().indexOf("pt")===0?"pt":"en";}
+  setLang(saved);
+})();
+</script>
+</body>
+</html>
