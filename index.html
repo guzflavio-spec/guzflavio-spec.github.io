@@ -220,6 +220,28 @@ h2{font-family:Fraunces,Georgia,serif;font-weight:650;font-size:clamp(26px,3.6vw
 .cta .mail a{color:var(--bg)}
 footer{color:var(--muted);font-size:13px;padding:28px 0 48px}
 @media print{.bar,.toggle{display:none}.case:not([open]) .four{display:grid}}
+/* brand v4 */
+.brands{display:grid;grid-template-columns:1fr;gap:16px}
+@media (min-width:860px){.brands{grid-template-columns:repeat(2,1fr)}}
+.bcard{background:var(--surface);border:1px solid var(--line);border-radius:18px;box-shadow:var(--shadow);padding:22px 22px 16px;display:flex;flex-direction:column}
+.bcard header{display:flex;align-items:baseline;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-bottom:6px}
+.bcard h3{margin:0;font-family:Fraunces,Georgia,serif;font-weight:650;font-size:24px;line-height:1.15}
+.bcard .tag{font:600 11.5px Inter,sans-serif;letter-spacing:.08em;text-transform:uppercase;color:var(--gold);background:var(--gold-soft);border-radius:999px;padding:4px 10px}
+.bcard dl{margin:8px 0 0}
+.bcard dt{font:700 11px Inter,sans-serif;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-top:12px}
+.bcard dd{margin:3px 0 0;font-size:15px;line-height:1.5}
+.bcard dd.seen{font-weight:500}
+.bcard dd.seen b{color:var(--accent)}
+.bcard .src{margin-top:auto;padding-top:14px;border-top:1px solid var(--line);font-size:12.5px;color:var(--muted);line-height:1.5}
+.bcard .src a{color:var(--accent);font-weight:600}
+.bcard dl + .src{margin-top:16px}
+.principles{display:grid;grid-template-columns:1fr;gap:12px}
+@media (min-width:860px){.principles{grid-template-columns:repeat(3,1fr)}}
+.principles > div{background:var(--accent-soft);border-radius:16px;padding:20px}
+.principles h3{margin:0 0 6px;font-size:18px;line-height:1.3}
+.principles p{margin:0 0 10px;font-size:15px;line-height:1.5}
+.principles small{display:block;font-size:13px;color:var(--accent);font-weight:600}
+.context{margin:18px 0 0;font-size:14px;color:var(--muted);max-width:760px;line-height:1.55}
 </style>
 </head>
 <body>
@@ -229,6 +251,7 @@ footer{color:var(--muted);font-size:13px;padding:28px 0 48px}
     <div class="brand">Flavio Guzmán <span><span class="pt">· Portfólio executivo</span><span class="en">· Executive portfolio</span></span></div>
     <nav class="nav" aria-label="Seções">
       <a href="#highlights"><span class="pt">Destaques</span><span class="en">Highlights</span></a>
+      <a href="#brand"><span class="pt">Marca</span><span class="en">Brand</span></a>
       <a href="#featured"><span class="pt">IA aplicada</span><span class="en">Applied AI</span></a>
       <a href="#career"><span class="pt">Trajetória</span><span class="en">Career</span></a>
       <a href="#media"><span class="pt">Mídia</span><span class="en">Media</span></a>
@@ -250,7 +273,7 @@ footer{color:var(--muted);font-size:13px;padding:28px 0 48px}
       <div class="eyebrow"><span class="pt">Portfólio executivo</span><span class="en">Executive portfolio</span></div>
       <div class="who" style="margin-top:16px"><img class="avatar" src="foto.jpg" width="72" height="72" alt="Flavio Guzmán"><div><b>Flavio Guzmán</b><span class="r"><span class="pt">Executivo de Marketing, Produto, CX e PR · São Paulo</span><span class="en">Marketing, Product, CX &amp; PR executive · São Paulo</span></span></div></div>
       <h1><span class="pt">Construo marcas que vendem. Agora, com IA no funil.</span><span class="en">I build brands that sell. Now with AI in the funnel.</span></h1>
-      <p class="lede"><span class="pt">Mais de 15 anos no automotivo premium, no Brasil e na América Latina, em Mercedes-Benz, Honda, GWM, MG e Lotus. Liderei entradas de marca com orçamento de até R$130 milhões, reportando ao CEO. Como Head de Go-to-Market da GWM, a chegada ao Brasil somou cerca de 8 mil carros e mais de R$2 bilhões em vendas em 5 meses. Em 2026 levei a IA para dentro do CRM: um copiloto de vendas em Salesforce e Claude que segue em uso.</span><span class="en">15+ years in premium automotive across Brazil and Latin America, at Mercedes-Benz, Honda, GWM, MG and Lotus. I have led brand entries with budgets of up to R$130M, reporting to the CEO. As GWM's Head of Go-to-Market, the Brazil launch reached about 8,000 cars and R$2B+ in sales in 5 months. In 2026 I brought AI into the CRM: a sales copilot on Salesforce and Claude that is still in use.</span></p>
+      <p class="lede"><span class="pt">Posiciono marcas premium e de luxo no Brasil, do lançamento ao relançamento, e uso IA para escalar a experiência do cliente sem tirar o atendimento humano do centro. Mais de 15 anos no automotivo premium, no Brasil e na América Latina, em Mercedes-Benz, Honda, GWM, MG e Lotus. Como Head de Go-to-Market da GWM, a chegada ao Brasil somou cerca de 8 mil carros e mais de R$2 bilhões em vendas em 5 meses. Em 2026 levei a IA para dentro do CRM: um copiloto de vendas em Salesforce e Claude que segue em uso.</span><span class="en">I position premium and luxury brands in Brazil, from launch to relaunch, and use AI to scale the client experience while keeping human service at the center. 15+ years in premium automotive across Brazil and Latin America, at Mercedes-Benz, Honda, GWM, MG and Lotus. As GWM's Head of Go-to-Market, the Brazil launch reached about 8,000 cars and R$2B+ in sales in 5 months. In 2026 I brought AI into the CRM: a sales copilot on Salesforce and Claude that is still in use.</span></p>
       <div class="btns">
         <a class="btn dark" href="cv.pdf" download="CV_Flavio_Guzman.pdf"><span class="pt">Baixar CV</span><span class="en">Download CV</span></a>
         <a class="btn line" href="https://www.linkedin.com/in/flavio-guzm%C3%A1n/" rel="noopener" target="_blank">LinkedIn</a>
@@ -261,7 +284,7 @@ footer{color:var(--muted);font-size:13px;padding:28px 0 48px}
       <h2><span class="pt">Em resumo</span><span class="en">At a glance</span></h2>
       <dl>
         <div class="row"><dt><span class="pt">Gestão</span><span class="en">Scope</span></dt><dd><span class="pt">Orçamentos de até R$130 mi · reporte ao CEO · 3 agências · rede de 70+ grupos de concessionárias</span><span class="en">Budgets up to R$130M · reporting to the CEO · 3 agencies · network of 70+ dealer groups</span></dd></div>
-        <div class="row"><dt><span class="pt">Marcas</span><span class="en">Brands</span></dt><dd>Lotus · MG · GWM (Haval, Ora, Wey) · Mercedes-Benz <span class="pt">e</span><span class="en">&amp;</span> AMG · Honda</dd></div>
+        <div class="row"><dt><span class="pt">Marca</span><span class="en">Brand</span></dt><dd><span class="pt">Lançamento (GWM), relançamento (MG), ultraluxo (Lotus) e posicionamento de preço (Mercedes-Benz e AMG)</span><span class="en">Launch (GWM), relaunch (MG), ultra-luxury (Lotus) and price positioning (Mercedes-Benz &amp; AMG)</span></dd></div>
         <div class="row"><dt><span class="pt">Áreas</span><span class="en">Functions</span></dt><dd><span class="pt">Marketing, Produto, Marca, CRM, CX e PR</span><span class="en">Marketing, Product, Brand, CRM, CX and PR</span></dd></div>
         <div class="row ai"><dt><span class="pt">IA</span><span class="en">AI</span></dt><dd><span class="pt"><b>22,3%</b> de conversão sem desconto e resposta em <b>&lt;5 min</b> com CRM e IA (2026)</span><span class="en"><b>22.3%</b> conversion with no discounting and <b>&lt;5 min</b> response with CRM and AI (2026)</span></dd></div>
         <div class="row"><dt><span class="pt">Idiomas</span><span class="en">Languages</span></dt><dd><span class="pt">Português nativo · Inglês fluente · Espanhol avançado</span><span class="en">Portuguese (native) · English (fluent) · Spanish (advanced)</span></dd></div>
@@ -277,14 +300,83 @@ footer{color:var(--muted);font-size:13px;padding:28px 0 48px}
     <p class="sub"><span class="pt">Resultados de marca, mercado e IA, com a empresa e o período de cada um.</span><span class="en">Brand, market and AI results, each with its company and period.</span></p>
     <div class="hl">
       <div><b>R$2 bi+</b><p><span class="pt">em vendas e ~8 mil carros nos 5 primeiros meses da marca no Brasil</span><span class="en">in sales and ~8,000 cars in the brand's first 5 months in Brazil</span></p><small>GWM · Go-to-Market</small></div>
-      <div><b><span class="pt">1º lugar</span><span class="en">#1</span></b><p><span class="pt">em SUVs híbridos já no primeiro mês de vendas</span><span class="en">in hybrid SUVs in the very first month of sales</span></p><small>GWM · Go-to-Market</small></div>
+      <div><b><span class="pt">1º lugar</span><span class="en">#1</span></b><p><span class="pt">no segmento premium acima de R$300 mil, à frente de BMW, Volvo e Audi (out/2023)</span><span class="en">in Brazil's premium segment above R$300k, ahead of BMW, Volvo and Audi (Oct 2023)</span></p><small>GWM · Go-to-Market</small></div>
       <div><b>16</b><p><span class="pt">prêmios de imprensa em 5 meses</span><span class="en">press awards in 5 months</span></p><small>GWM · Go-to-Market</small></div>
       <div><b>R$33,6 mi</b><p><span class="pt">em mídia espontânea, com 600+ matérias positivas</span><span class="en">in earned media, with 600+ positive articles</span></p><small>MG Motor · 2025</small></div>
       <div><b><span class="pt">1º</span><span class="en">First</span></b><p><span class="pt">show de drones num lançamento automotivo, no rooftop do Teatro Santander</span><span class="en">drone show at a car launch, on the Teatro Santander rooftop</span></p><small>MG Motor · 11/11/2025</small></div>
-      <div><b>R$5 mi</b><p><span class="pt">em mídia espontânea no lançamento da marca</span><span class="en">in earned media at the brand launch</span></p><small>Lotus · 2026</small></div>
+      <div><b><span class="pt">1º lote</span><span class="en">First lot</span></b><p><span class="pt">de ultraluxo praticamente vendido antes do primeiro test-drive</span><span class="en">of ultra-luxury cars almost sold out before the first test drive</span></p><small>Lotus · 2026</small></div>
       <div class="ai"><b>22,3%</b><p><span class="pt">de conversão em leads de alto valor, sem desconto no preço</span><span class="en">conversion on high-ticket leads, with no price discounting</span></p><small><span class="pt">IA + CRM · jan–ago 2026</span><span class="en">AI + CRM · Jan–Aug 2026</span></small></div>
       <div class="ai"><b>&lt;5 min</b><p><span class="pt">até a primeira resposta ao cliente</span><span class="en">to first customer response</span></p><small><span class="pt">IA + CRM · jan–ago 2026</span><span class="en">AI + CRM · Jan–Aug 2026</span></small></div>
     </div>
+  </div>
+</section>
+
+<section id="brand">
+  <div class="wrap">
+    <h2><span class="pt">Marca e posicionamento</span><span class="en">Brand &amp; positioning</span></h2>
+    <p class="sub"><span class="pt">Quatro marcas, quatro pontos de partida diferentes. O que eu encontrei, o que fiz e como o mercado passou a ver cada uma.</span><span class="en">Four brands, four different starting points. What I found, what I did, and how the market came to see each one.</span></p>
+    <div class="brands">
+      <article class="bcard">
+        <header><h3>GWM</h3><span class="tag"><span class="pt">Lançamento · 2022–2025</span><span class="en">Launch · 2022–2025</span></span></header>
+        <dl>
+          <dt><span class="pt">Desafio</span><span class="en">Challenge</span></dt>
+          <dd><span class="pt">Marca chinesa desconhecida, vendendo SUVs eletrificados de até R$300 mil num mercado que desconfiava de carro chinês.</span><span class="en">An unknown Chinese brand selling electrified SUVs at up to R$300k in a market wary of Chinese cars.</span></dd>
+          <dt><span class="pt">O que fiz</span><span class="en">What I did</span></dt>
+          <dd><span class="pt">Levei ao mercado a plataforma “Hello, tomorrow”, que posiciona a GWM como <i>Autotech</i>, e liderei o go-to-market desde a pré-venda: R$130 mi de verba, posicionamento de preço e 70+ grupos de concessionárias contando a mesma história.</span><span class="en">Took the “Hello, tomorrow” platform to market, positioning GWM as an <i>Autotech</i>, and led go-to-market from pre-sale: a R$130M budget, price positioning and 70+ dealer groups telling one story.</span></dd>
+          <dt><span class="pt">Como passou a ser vista</span><span class="en">How it came to be seen</span></dt>
+          <dd class="seen"><span class="pt">No 1º mês, o Haval H6 vendeu mais que o Toyota Corolla Cross e virou o híbrido mais vendido do Brasil. Em outubro de 2023, a versão GT foi <b>líder do segmento premium acima de R$300 mil</b>, à frente de BMW X1, Volvo XC60 e Audi Q5. 16 prêmios de imprensa em 5 meses.</span><span class="en">In month one, the Haval H6 outsold the Toyota Corolla Cross and became Brazil's best-selling hybrid. In October 2023 the GT version <b>led the premium segment above R$300k</b>, ahead of the BMW X1, Volvo XC60 and Audi Q5. 16 press awards in 5 months.</span></dd>
+        </dl>
+        <p class="src"><span class="pt">Fontes</span><span class="en">Sources</span>: <a href="https://motor1.uol.com.br/news/670206/gwm-haval-mais-corolla-cross/" target="_blank" rel="noopener">Motor1, 01/06/2023</a> · <a href="https://www.autossegredos.com.br/mercado/gmw-haval-h6-e-lider-entre-os-hibridos-em-outubro/" target="_blank" rel="noopener">Autos Segredos, 03/11/2023</a></p>
+      </article>
+      <article class="bcard">
+        <header><h3>MG Motor</h3><span class="tag"><span class="pt">Relançamento · 2025</span><span class="en">Relaunch · 2025</span></span></header>
+        <dl>
+          <dt><span class="pt">Desafio</span><span class="en">Challenge</span></dt>
+          <dd><span class="pt">Relançar uma marca britânica histórica, sob novo controle, com uma linha 100% elétrica.</span><span class="en">Relaunch a heritage British brand, under new ownership, with an all-electric line-up.</span></dd>
+          <dt><span class="pt">O que fiz</span><span class="en">What I did</span></dt>
+          <dd><span class="pt">Reestruturei marca, produto e comunicação durante a reorganização, com R$50 mi de verba: go-to-market da linha premium IM, estande no Salão do Automóvel de São Paulo e o show de drones do lançamento.</span><span class="en">Restructured brand, product and communications through the reorganization, with a R$50M budget: go-to-market for the premium IM line, the São Paulo Motor Show stand and the launch drone show.</span></dd>
+          <dt><span class="pt">Como passou a ser vista</span><span class="en">How it came to be seen</span></dt>
+          <dd class="seen"><span class="pt"><b>600+ matérias positivas</b> e R$33,6 mi em mídia espontânea.</span><span class="en"><b>600+ positive articles</b> and R$33.6M in earned media.</span></dd>
+        </dl>
+        <p class="src"><span class="pt">Fonte: clipping de imprensa auditado, out–dez 2025</span><span class="en">Source: audited press clipping, Oct–Dec 2025</span></p>
+      </article>
+      <article class="bcard">
+        <header><h3>Lotus</h3><span class="tag"><span class="pt">Ultraluxo · 2026</span><span class="en">Ultra-luxury · 2026</span></span></header>
+        <dl>
+          <dt><span class="pt">Desafio</span><span class="en">Challenge</span></dt>
+          <dd><span class="pt">Abrir a operação oficial de uma marca de ultraluxo e disputar clientes de Porsche, Mercedes-AMG e BMW M.</span><span class="en">Open the official operation of an ultra-luxury brand and compete for Porsche, Mercedes-AMG and BMW M clients.</span></dd>
+          <dt><span class="pt">O que fiz</span><span class="en">What I did</span></dt>
+          <dd><span class="pt">Montei marketing, CX e PR do zero, reportando ao CEO, com a personalização como pilar da proposta, eventos VIP, track days e formadores de opinião.</span><span class="en">Built marketing, CX and PR from scratch, reporting to the CEO, with personalization at the core of the offer, VIP events, track days and key opinion leaders.</span></dd>
+          <dt><span class="pt">Como passou a ser vista</span><span class="en">How it came to be seen</span></dt>
+          <dd class="seen"><span class="pt">O primeiro lote foi <b>praticamente todo vendido antes de os clientes andarem nos carros</b>. ~R$5 mi em mídia espontânea no lançamento.</span><span class="en">The first lot was <b>almost fully sold before clients had even driven the cars</b>. ~R$5M in earned media at launch.</span></dd>
+        </dl>
+        <p class="src"><span class="pt">Fontes</span><span class="en">Sources</span>: <a href="https://autoesporte.globo.com/carros/lancamentos-de-carros/noticia/2026/08/lotus-chega-brasil-esportivo-raiz-carros-eletricos-ate-900-cv.ghtml" target="_blank" rel="noopener">Autoesporte, 09/08/2026</a> · <a href="https://www.autoindustria.com.br/2026/04/23/lendaria-lotus-comeca-a-operar-oficialmente-no-brasil/" target="_blank" rel="noopener">AutoIndústria, 23/04/2026</a></p>
+      </article>
+      <article class="bcard">
+        <header><h3>Mercedes-Benz <span class="pt">e</span><span class="en">&amp;</span> AMG</h3><span class="tag"><span class="pt">Topo de linha · 2012–2022</span><span class="en">Top tier · 2012–2022</span></span></header>
+        <dl>
+          <dt><span class="pt">Desafio</span><span class="en">Challenge</span></dt>
+          <dd><span class="pt">Proteger o posicionamento de topo e trazer híbridos e elétricos ao Brasil.</span><span class="en">Protect top-tier positioning and bring hybrids and EVs to Brazil.</span></dd>
+          <dt><span class="pt">O que fiz</span><span class="en">What I did</span></dt>
+          <dd><span class="pt">Marketing de produto e preço de AMG GT, GLC, Classe G, Classe C, SL e EQC; configurador online e Mercedes me connect; consultoria de posicionamento ao HUB LATAM e Market Manager em 5 países.</span><span class="en">Product marketing and pricing for AMG GT, GLC, G-Class, C-Class, SL and EQC; the online configurator and Mercedes me connect; positioning consulting for the LATAM hub and Market Manager across 5 countries.</span></dd>
+          <dt><span class="pt">Reconhecimento</span><span class="en">Recognition</span></dt>
+          <dd class="seen"><span class="pt">Certificado pela marca como <b>AMG Product Expert</b> e <b>AMG Project ONE Ambassador</b>.</span><span class="en">Certified by the brand as <b>AMG Product Expert</b> and <b>AMG Project ONE Ambassador</b>.</span></dd>
+        </dl>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="brand-ai">
+  <div class="wrap">
+    <h2><span class="pt">IA a serviço da marca</span><span class="en">AI in service of the brand</span></h2>
+    <p class="sub"><span class="pt">No luxo, o atendimento faz parte do produto. Por isso a IA que eu construo prepara o trabalho, e quem entrega é uma pessoa.</span><span class="en">In luxury, service is part of the product. So the AI I build prepares the work, and a person delivers it.</span></p>
+    <div class="principles">
+      <div><h3><span class="pt">A IA prepara, a pessoa entrega</span><span class="en">AI prepares, a person delivers</span></h3><p><span class="pt">O copiloto lê o perfil do cliente e sugere o tom da conversa. Quem envia a mensagem é o vendedor.</span><span class="en">The copilot reads the client profile and suggests the tone. The advisor sends the message.</span></p><small><span class="pt">Prova: copiloto de vendas, abaixo</span><span class="en">Proof: sales copilot, below</span></small></div>
+      <div><h3><span class="pt">Prontidão sem roteiro</span><span class="en">Ready, never scripted</span></h3><p><span class="pt">O cliente recebe a primeira resposta rápido, escrita para ele, e não um texto padrão.</span><span class="en">Clients get a fast first reply written for them, not a template.</span></p><small><span class="pt">Prova: resposta em menos de 5 minutos</span><span class="en">Proof: first reply in under 5 minutes</span></small></div>
+      <div><h3><span class="pt">Preço também é marca</span><span class="en">Price is brand, too</span></h3><p><span class="pt">Converter sem desconto protege o posicionamento e a margem.</span><span class="en">Converting without discounts protects positioning and margin.</span></p><small><span class="pt">Prova: 22,3% de conversão sem desconto</span><span class="en">Proof: 22.3% conversion with no discounting</span></small></div>
+    </div>
+    <p class="context"><span class="pt">Esse equilíbrio tem base: na pesquisa “The Luxury of Being Known” (BCG, 2026), 79% dos clientes de luxo dizem que trocar a conexão humana por automação diminui o luxo, e clientes reconhecidos dão nota 4,2 à experiência, contra 3,7.</span><span class="en">There is evidence for this balance: in BCG's 2026 study “The Luxury of Being Known”, 79% of luxury clients say replacing human connection with automation diminishes luxury, and recognized clients rate their experience 4.2 vs 3.7.</span></p>
   </div>
 </section>
 
