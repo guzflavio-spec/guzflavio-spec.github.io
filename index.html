@@ -3,10 +3,16 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Flavio Guzmán · AI Portfolio</title>
+<title>Flavio Guzmán · Portfólio de IA</title>
 <meta name="description" content="Flavio Guzmán — Marketing &amp; CX leader building AI systems that sell: CRM copilots, multi-agent marketing and data products.">
-<meta property="og:title" content="Flavio Guzmán · AI Sales CRM Copilot and other AI deliveries">
-<meta property="og:description" content="AI deliveries ranked by business impact: the pain, the AI, the output, and what it would take without AI.">
+<meta property="og:title" content="Flavio Guzmán · IA aplicada a marketing e vendas">
+<meta property="og:description" content="Sistemas de IA em produção no funil de vendas: a dor, a solução, o resultado e quanto custaria sem IA. AI systems that sell.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://guzflavio-spec.github.io/">
+<meta property="og:image" content="https://guzflavio-spec.github.io/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,650&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -41,12 +47,19 @@ a{color:var(--accent)}
 .bar .wrap{display:flex;align-items:center;justify-content:space-between;height:56px;gap:12px}
 .brand{font-weight:700;letter-spacing:.2px;white-space:nowrap}
 .brand span{color:var(--muted);font-weight:500}
+.bar-right{display:flex;align-items:center;gap:10px}
+@media (max-width:480px){.brand > span{display:none}}
+.hdr-cta{font:600 13px Inter,sans-serif;color:var(--ink);text-decoration:none;border:1px solid var(--line);background:var(--surface);border-radius:999px;padding:6px 12px}
 .toggle{display:inline-flex;border:1px solid var(--line);border-radius:999px;overflow:hidden;background:var(--surface)}
 .toggle button{border:0;background:none;color:var(--muted);font:600 13px Inter,sans-serif;padding:6px 12px;cursor:pointer}
 .toggle button[aria-pressed="true"]{background:var(--ink);color:var(--bg)}
 
 /* hero */
 .hero{padding:64px 0 40px}
+.who{display:flex;align-items:center;gap:14px;margin-bottom:22px}
+.avatar{width:72px;height:72px;border-radius:50%;object-fit:cover;border:2px solid var(--line);flex:none}
+.who b{display:block;font-size:17px;line-height:1.2}
+.who span.r{color:var(--muted);font-size:14px}
 .eyebrow{font:600 12px Inter,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:var(--accent)}
 h1{font-family:Fraunces,Georgia,serif;font-weight:650;font-size:clamp(34px,6vw,58px);line-height:1.05;margin:12px 0 18px;letter-spacing:-.01em}
 .lede{font-size:clamp(17px,2.2vw,20px);color:var(--muted);max-width:720px;margin:0}
@@ -54,7 +67,7 @@ h1{font-family:Fraunces,Georgia,serif;font-weight:650;font-size:clamp(34px,6vw,5
 @media (min-width:720px){.kpis{grid-template-columns:repeat(4,1fr)}}
 .kpi{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:18px;box-shadow:var(--shadow)}
 .kpi b{display:block;font-family:Fraunces,Georgia,serif;font-size:32px;line-height:1.1;font-weight:650}
-.kpi small{color:var(--muted);font-size:13px;line-height:1.4;display:block;margin-top:4px}
+.kpi small{color:var(--muted);font-size:14px;line-height:1.4;display:block;margin-top:4px}
 
 /* section */
 section{padding:40px 0}
@@ -69,14 +82,22 @@ h2{font-family:Fraunces,Georgia,serif;font-weight:650;font-size:clamp(26px,3.6vw
 .badge.live{background:var(--accent-soft);color:var(--accent)}
 .feature h3{font-family:Fraunces,Georgia,serif;font-size:clamp(28px,4.6vw,44px);line-height:1.08;margin:14px 0 6px;font-weight:650}
 .feature .org{color:var(--muted);margin:0}
+.feature .role{margin:12px 0 0;font-size:15px;max-width:760px}
+.feature .role b{color:var(--accent)}
 
 .flow{display:grid;grid-template-columns:1fr;gap:10px;padding:24px}
 @media (min-width:860px){.flow{grid-template-columns:repeat(5,1fr);padding:28px 36px}}
 .step{position:relative;background:var(--bg);border:1px solid var(--line);border-radius:12px;padding:14px}
 .step i{font-style:normal;font:700 11px Inter,sans-serif;letter-spacing:.1em;color:var(--accent);text-transform:uppercase}
 .step b{display:block;margin:4px 0 2px;font-size:15px}
-.step span{color:var(--muted);font-size:13.5px;line-height:1.45}
+.step span{color:var(--muted);font-size:14px;line-height:1.45}
 .step.out{background:var(--accent-soft);border-color:transparent}
+@media (max-width:859px){
+  .flow{grid-template-columns:repeat(2,1fr)}
+  .step > span{display:none}
+  .step.out{grid-column:1/-1}
+  .step.out > span{display:block}
+}
 @media (min-width:860px){
   .step:not(:last-child)::after{content:"→";position:absolute;right:-12px;top:50%;transform:translateY(-50%);color:var(--muted);font-size:14px;z-index:1}
 }
@@ -87,21 +108,21 @@ h2{font-family:Fraunces,Georgia,serif;font-weight:650;font-size:clamp(26px,3.6vw
 .disc{display:inline-flex;gap:6px}
 .disc button{border:1px solid var(--line);background:var(--surface);color:var(--ink);border-radius:8px;font:700 13px Inter,sans-serif;width:36px;height:32px;cursor:pointer}
 .disc button[aria-pressed="true"]{background:var(--accent);border-color:var(--accent);color:#fff}
-.msg-label{font-size:13px;color:var(--muted)}
+.msg-label{font-size:14px;color:var(--muted)}
 .bubble{background:var(--surface);border:1px solid var(--line);border-radius:12px 12px 12px 4px;padding:12px 14px;font-size:15px;max-width:620px}
-.tone{font-size:13px;color:var(--muted);margin-top:8px}
+.tone{font-size:14px;color:var(--muted);margin-top:8px}
 
 .four{display:grid;grid-template-columns:1fr;gap:1px;background:var(--line);border-top:1px solid var(--line);margin-top:20px}
 @media (min-width:720px){.four{grid-template-columns:repeat(2,1fr)}}
 .four > div{background:var(--surface);padding:22px 24px}
 @media (min-width:720px){.four > div{padding:24px 36px}}
-.label{font:700 11px Inter,sans-serif;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:8px}
+.label{font:700 12px Inter,sans-serif;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:8px}
 .four p{margin:0 0 8px}
 .four ul{margin:0;padding-left:18px}
 .four li{margin:3px 0}
 .noai{background:var(--gold-soft) !important}
 .noai .big{font-family:Fraunces,Georgia,serif;font-size:26px;font-weight:650;line-height:1.15;margin-bottom:6px}
-.assume{font-size:13px;color:var(--muted)}
+.assume{font-size:14px;color:var(--muted)}
 
 /* cases */
 .cases{display:grid;grid-template-columns:1fr;gap:16px}
@@ -110,9 +131,10 @@ h2{font-family:Fraunces,Georgia,serif;font-weight:650;font-size:clamp(26px,3.6vw
 .case summary::-webkit-details-marker{display:none}
 .rank{font-family:Fraunces,Georgia,serif;font-size:28px;font-weight:650;color:var(--accent);width:36px}
 .case h3{margin:0;font-size:18px;line-height:1.3}
-.case .meta{color:var(--muted);font-size:14px;margin-top:2px}
-.case .eff{text-align:right;font-size:13px;color:var(--muted);white-space:nowrap}
-.case .eff b{display:block;color:var(--gold);font-size:15px}
+.case .meta{color:var(--ink);font-size:15px;margin-top:3px}
+.case .st{display:inline-block;color:var(--muted);font-size:13px;margin-top:4px}
+.case .eff{text-align:right;font-size:12.5px;color:var(--muted);white-space:nowrap}
+.case .eff b{display:block;color:var(--muted);font-size:13.5px;font-weight:600}
 .chev{transition:transform .2s}
 .case[open] .chev{transform:rotate(180deg)}
 .case .four{margin-top:0;border-radius:0 0 16px 16px;overflow:hidden}
@@ -130,7 +152,11 @@ h2{font-family:Fraunces,Georgia,serif;font-weight:650;font-size:clamp(26px,3.6vw
 @media (min-width:720px){.cta{padding:40px}}
 .cta h2{color:var(--bg);margin:0}
 .cta p{margin:6px 0 0;opacity:.75}
+.btns{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
 .btn{display:inline-block;background:var(--bg);color:var(--ink);text-decoration:none;font-weight:600;padding:12px 18px;border-radius:10px}
+.btn.ghost{background:transparent;color:var(--bg);border:1px solid color-mix(in srgb,var(--bg) 40%,transparent)}
+.cta .mail{display:block;margin-top:14px;font-size:14px;opacity:.75}
+.cta .mail a{color:var(--bg)}
 footer{color:var(--muted);font-size:13px;padding:28px 0 48px}
 @media print{.bar,.toggle{display:none}.case:not([open]) .four{display:grid}}
 </style>
@@ -139,41 +165,46 @@ footer{color:var(--muted);font-size:13px;padding:28px 0 48px}
 
 <div class="bar">
   <div class="wrap">
-    <div class="brand">Flavio Guzmán <span>· AI Portfolio</span></div>
+    <div class="brand">Flavio Guzmán <span><span class="pt">· Portfólio de IA</span><span class="en">· AI Portfolio</span></span></div>
+    <div class="bar-right">
+    <a class="hdr-cta" href="#contact"><span class="pt">Contato</span><span class="en">Contact</span></a>
     <div class="toggle" role="group" aria-label="Idioma / Language">
       <button type="button" data-set="pt" aria-pressed="true">PT</button>
       <button type="button" data-set="en" aria-pressed="false">EN</button>
+    </div>
     </div>
   </div>
 </div>
 
 <header class="hero">
   <div class="wrap">
+    <div class="who"><img class="avatar" src="foto.jpg" width="72" height="72" alt="Flavio Guzmán"><div><b>Flavio Guzmán</b><span class="r"><span class="pt">Head de Marketing, CX e PR</span><span class="en">Head of Marketing, CX &amp; PR</span></span></div></div>
     <div class="eyebrow"><span class="pt">Marketing, CX e IA aplicada</span><span class="en">Marketing, CX and applied AI</span></div>
     <h1><span class="pt">Eu construo sistemas de IA que vendem.</span><span class="en">I build AI systems that sell.</span></h1>
     <p class="lede">
-      <span class="pt">Head de Marketing &amp; CX que desenha, testa e coloca em produção copilotos de vendas, agências multiagente e produtos de dados com Claude. Abaixo, cada entrega em quatro partes: a dor, a IA, o resultado e o que custaria sem IA.</span>
-      <span class="en">Head of Marketing &amp; CX who designs, tests and ships sales copilots, multi-agent marketing teams and data products with Claude. Below, each delivery in four parts: the pain, the AI, the output, and what it would take without AI.</span>
+      <span class="pt">Lidero Marketing e CX e coloco IA para trabalhar no funil. Um dos meus sistemas diz a cada vendedor de uma importadora de luxo quem chamar hoje e o que dizer, e está em produção no Salesforce. Cada caso abaixo mostra a dor, a solução, o resultado e quanto custaria sem IA.</span>
+      <span class="en">I lead Marketing and CX and put AI to work across the funnel. One of my systems tells every salesperson at a luxury car importer who to call today and what to say, live in Salesforce. Each case below shows the pain, the solution, the result and what it would cost without AI.</span>
     </p>
     <div class="kpis">
-      <div class="kpi"><b>7</b><small><span class="pt">entregas com IA, ordenadas por impacto no negócio</span><span class="en">AI deliveries, ranked by business impact</span></small></div>
-      <div class="kpi"><b>100%</b><small><span class="pt">do copiloto de vendas implantado no Salesforce</span><span class="en">of the sales copilot live in Salesforce</span></small></div>
+      <div class="kpi"><b>22,3%</b><small><span class="pt">de conversão em leads de alto valor, sem desconto no preço</span><span class="en">conversion on high-ticket leads, with no price discounting</span></small></div>
+      <div class="kpi"><b>&lt;5 min</b><small><span class="pt">até a primeira resposta ao cliente, com CRM e IA</span><span class="en">to first customer response, with CRM and AI</span></small></div>
+      <div class="kpi"><b><span class="pt">7 dígitos</span><span class="en">7 figures</span></b><small><span class="pt">de risco financeiro achado por auditoria automática</span><span class="en">in financial exposure found by an automated audit</span></small></div>
       <div class="kpi"><b>~60</b><small><span class="pt">pessoas-mês estimadas para fazer o mesmo sem IA*</span><span class="en">estimated person-months to do the same without AI*</span></small></div>
-      <div class="kpi"><b>9</b><small><span class="pt">agentes coordenados numa agência de marketing</span><span class="en">agents coordinated in one marketing agency</span></small></div>
     </div>
   </div>
 </header>
 
 <section id="featured">
   <div class="wrap">
-    <h2><span class="pt">Destaque</span><span class="en">Featured</span></h2>
+    <h2><span class="pt">O caso principal</span><span class="en">The flagship case</span></h2>
     <p class="sub"><span class="pt">Um copiloto que entrega a cada vendedor quem chamar hoje, por que e com qual mensagem.</span><span class="en">A copilot that tells every salesperson who to call today, why, and with which message.</span></p>
 
     <article class="feature">
       <div class="feature-head">
-        <span class="badge live"><span class="pt">Em produção</span><span class="en">In production</span></span>
+        <span class="badge live"><span class="pt">Em uso</span><span class="en">In use</span></span>
         <h3>AI Sales CRM Copilot</h3>
-        <p class="org"><span class="pt">Importadora de carros de luxo · Salesforce + Claude · jun–nov 2026</span><span class="en">Luxury car importer · Salesforce + Claude · Jun–Nov 2026</span></p>
+        <p class="org"><span class="pt">Importadora de carros de luxo · Salesforce + Claude · jun–ago 2026 · segue em uso</span><span class="en">Luxury car importer · Salesforce + Claude · Jun–Aug 2026 · still in use</span></p>
+        <p class="role"><span class="pt"><b>Meu papel:</b> como Head de Marketing, CX e PR, desenhei a solução, construí o copiloto com o Claude e implantei os fluxos, o lead score e a qualificação MEDDIC no Salesforce.</span><span class="en"><b>My role:</b> as Head of Marketing, CX and PR, I designed the solution, built the copilot with Claude and rolled out the flows, lead scoring and MEDDIC qualification in Salesforce.</span></p>
       </div>
 
       <div class="flow" aria-label="Pipeline">
@@ -204,18 +235,19 @@ footer{color:var(--muted);font-size:13px;padding:28px 0 48px}
           <p><span class="pt">Marca de luxo com meta anual agressiva e desconto zero. Os vendedores perdiam leads, registravam mal no CRM e decidiam sozinhos quem chamar, com qual carro e em que tom. A diretoria não tinha visão confiável por vendedor.</span><span class="en">Luxury brand with an aggressive annual target and a zero-discount policy. Reps lost leads, logged poorly in the CRM and decided alone who to call, with which car and in what tone. Leadership had no reliable view per rep.</span></p>
         </div>
         <div>
-          <div class="label"><span class="pt">2 · Parte técnica de IA</span><span class="en">2 · The AI</span></div>
+          <div class="label"><span class="pt">2 · A solução</span><span class="en">2 · The solution</span></div>
+          <p><span class="pt">O Claude cruza o perfil de cada cliente com o mercado e o estoque do dia e escreve a mensagem no tom certo. Por baixo:</span><span class="en">Claude matches each buyer's profile with the day's market and stock and writes the message in the right tone. Under the hood:</span></p>
           <ul>
             <li><span class="pt">Copiloto em HTML que chama o Claude com fichas técnicas, mercado, carteira e regras de marca</span><span class="en">HTML copilot that calls Claude with spec sheets, market data, the rep's book and brand rules</span></li>
             <li><span class="pt">Agente Agentforce com base de conhecimento em formato RAG</span><span class="en">Agentforce agent with a RAG-style knowledge base</span></li>
-            <li><span class="pt">Lead score nativo de 0 a 100 (Perfil, MEDDICC, Engajamento) e 30+ flows e automações</span><span class="en">Native 0–100 lead score (Fit, MEDDICC, Engagement) and 30+ flows and automations</span></li>
-            <li><span class="pt">Orquestrador de ~12 skills com blueprint em LangGraph e portão de qualidade</span><span class="en">Orchestrator over ~12 skills with a LangGraph blueprint and a quality gate</span></li>
+            <li><span class="pt">Lead score nativo de 0 a 100 (Perfil, MEDDICC, Engajamento) e 30+ fluxos e automações</span><span class="en">Native 0–100 lead score (Fit, MEDDICC, Engagement) and 30+ flows and automations</span></li>
+            <li><span class="pt">Orquestrador de ~12 habilidades com arquitetura em LangGraph e portão de qualidade</span><span class="en">Orchestrator over ~12 skills with a LangGraph blueprint and a quality gate</span></li>
             <li><span class="pt">Painel diário criptografado (AES-GCM) gerado por tarefa agendada</span><span class="en">Daily encrypted (AES-GCM) board snapshot built by a scheduled job</span></li>
           </ul>
         </div>
         <div>
           <div class="label"><span class="pt">3 · Resultado</span><span class="en">3 · Output</span></div>
-          <p><span class="pt">100% implantado. Cada vendedor abre o dia com a lista priorizada, o perfil do cliente, o argumento de mercado e a mensagem pronta. Uma auditoria automática de pedidos achou um risco financeiro de sete dígitos em sinais sem confirmação e conflitos de alocação de carro, e propôs as regras de validação.</span><span class="en">100% live. Every rep starts the day with a prioritized list, the buyer's profile, the market angle and a ready message. An automated order audit surfaced a seven-figure exposure in unconfirmed deposits plus car-allocation conflicts, and proposed the validation rules.</span></p>
+          <p><span class="pt">Implantado para todo o time. Conversão de 22,3% em leads de alto valor sem desconto no preço e primeira resposta em menos de 5 minutos. Cada vendedor abre o dia com a lista priorizada, o perfil do cliente, o argumento de mercado e a mensagem pronta. Uma auditoria automática de pedidos achou um risco financeiro de sete dígitos em sinais sem confirmação e conflitos de alocação de carro, e propôs as regras de validação.</span><span class="en">Rolled out to the whole team. 22.3% conversion on high-ticket leads with no discounting, and first response in under 5 minutes. Every rep starts the day with a prioritized list, the buyer's profile, the market angle and a ready message. An automated order audit surfaced a seven-figure exposure in unconfirmed deposits plus car-allocation conflicts, and proposed the validation rules.</span></p>
         </div>
         <div class="noai">
           <div class="label"><span class="pt">4 · Sem IA (estimativa)</span><span class="en">4 · Without AI (estimate)</span></div>
@@ -237,7 +269,7 @@ footer{color:var(--muted);font-size:13px;padding:28px 0 48px}
       <details class="case">
         <summary>
           <div class="rank">2</div>
-          <div><h3><span class="pt">ERP/CRM para um ateliê artesanal</span><span class="en">ERP/CRM for a handmade studio</span></h3><div class="meta"><span class="pt">Gestão e automação · em testes com clientes fictícios</span><span class="en">Operations and automation · in testing with mock clients</span></div></div>
+          <div><h3><span class="pt">ERP/CRM para um ateliê artesanal</span><span class="en">ERP/CRM for a handmade studio</span></h3><div class="meta"><span class="pt">A venda fecha e baixa o estoque sozinha.</span><span class="en">A sale closes and updates stock on its own.</span></div><div class="st"><span class="pt">Em testes com clientes fictícios</span><span class="en">In testing with mock clients</span></div></div>
           <div class="eff"><b><span class="pt">3 pessoas · 2–3 meses</span><span class="en">3 people · 2–3 mo</span></b><span class="pt">sem IA</span><span class="en">without AI</span></div>
         </summary>
         <div class="four">
@@ -251,12 +283,12 @@ footer{color:var(--muted);font-size:13px;padding:28px 0 48px}
       <details class="case">
         <summary>
           <div class="rank">3</div>
-          <div><h3><span class="pt">Agência de marketing com 9 agentes</span><span class="en">9-agent marketing agency</span></h3><div class="meta"><span class="pt">Multiagente · 1ª campanha em andamento</span><span class="en">Multi-agent · first campaign in progress</span></div></div>
-          <div class="eff"><b><span class="pt">5–8 pessoas</span><span class="en">5–8 people</span></b><span class="pt">fee mensal sem IA</span><span class="en">monthly retainer without AI</span></div>
+          <div><h3><span class="pt">Agência de marketing com 9 agentes</span><span class="en">9-agent marketing agency</span></h3><div class="meta"><span class="pt">Uma agência inteira operando com R$ 300 de mídia por mês.</span><span class="en">A full agency running on R$ 300 of media a month.</span></div><div class="st"><span class="pt">1ª campanha em andamento</span><span class="en">First campaign in progress</span></div></div>
+          <div class="eff"><b><span class="pt">5–8 pessoas</span><span class="en">5–8 people</span></b><span class="pt">mensalidade sem IA</span><span class="en">monthly retainer without AI</span></div>
         </summary>
         <div class="four">
           <div><div class="label"><span class="pt">Dor</span><span class="en">Pain</span></div><p><span class="pt">Sem time de marketing e com R$ 300 por mês de mídia, o negócio precisava de ideias não óbvias, voz de marca consistente e cadência semanal.</span><span class="en">No marketing team and a R$ 300/month media budget, yet the business needed non-obvious ideas, a consistent brand voice and a weekly cadence.</span></p></div>
-          <div><div class="label"><span class="pt">IA</span><span class="en">AI</span></div><p><span class="pt">9 subagentes (estratégia, criação, conteúdo, arte, mídia, RP, CRM, dados e crivo), 6 skills próprias, guia de marca único e ciclo de 9 etapas com portão de qualidade (nota mínima 9,0).</span><span class="en">9 sub-agents (strategy, creative, content, art, media, PR, CRM, data and review), 6 custom skills, a single brand guide and a 9-step cycle with a quality gate (minimum score 9.0).</span></p></div>
+          <div><div class="label"><span class="pt">IA</span><span class="en">AI</span></div><p><span class="pt">9 subagentes (estratégia, criação, conteúdo, arte, mídia, RP, CRM, dados e crivo), 6 habilidades próprias, guia de marca único e ciclo de 9 etapas com portão de qualidade (nota mínima 9,0).</span><span class="en">9 sub-agents (strategy, creative, content, art, media, PR, CRM, data and review), 6 custom skills, a single brand guide and a 9-step cycle with a quality gate (minimum score 9.0).</span></p></div>
           <div><div class="label"><span class="pt">Resultado</span><span class="en">Output</span></div><p><span class="pt">Agência instalável com cadências semanal, mensal e sazonal. A primeira peça, um vídeo de campanha com voz gerada na ElevenLabs, está pronta e aprovada.</span><span class="en">An installable agency with weekly, monthly and seasonal cadences. The first asset, a campaign video with an ElevenLabs voice, is done and approved.</span></p></div>
           <div class="noai"><div class="label"><span class="pt">Sem IA</span><span class="en">Without AI</span></div><p class="assume"><span class="pt">Estrategista e diretor de criação por 4 a 6 semanas para montar; uma agência de 5 a 8 pessoas para operar.</span><span class="en">Strategist and creative director for 4–6 weeks to set up; a 5–8 person agency to run it.</span></p></div>
         </div>
@@ -265,7 +297,7 @@ footer{color:var(--muted);font-size:13px;padding:28px 0 48px}
       <details class="case">
         <summary>
           <div class="rank">4</div>
-          <div><h3><span class="pt">Motor de sinais quantitativos</span><span class="en">Quant signal engine</span></h3><div class="meta"><span class="pt">Pesquisa quantitativa e alertas ao vivo · ~18 mil linhas de Python</span><span class="en">Quant research and live alerts · ~18k lines of Python</span></div></div>
+          <div><h3><span class="pt">Motor de sinais quantitativos</span><span class="en">Quant signal engine</span></h3><div class="meta"><span class="pt">Rigor que impediu dinheiro numa estratégia que só parecia boa.</span><span class="en">Rigor that kept money out of a strategy that only looked good.</span></div><div class="st"><span class="pt">Ao vivo · ~18 mil linhas de Python</span><span class="en">Live · ~18k lines of Python</span></div></div>
           <div class="eff"><b><span class="pt">3 pessoas · 4–6 meses</span><span class="en">3 people · 4–6 mo</span></b><span class="pt">sem IA</span><span class="en">without AI</span></div>
         </summary>
         <div class="four">
@@ -279,7 +311,7 @@ footer{color:var(--muted);font-size:13px;padding:28px 0 48px}
       <details class="case">
         <summary>
           <div class="rank">5</div>
-          <div><h3><span class="pt">Relatório de mercado premium</span><span class="en">Premium market report</span></h3><div class="meta"><span class="pt">BI e visualização · importadora de carros de luxo</span><span class="en">BI and visualization · luxury car importer</span></div></div>
+          <div><h3><span class="pt">Relatório de mercado premium</span><span class="en">Premium market report</span></h3><div class="meta"><span class="pt">Achou um mercado regional fora do eixo Rio–SP.</span><span class="en">Found a regional market outside the Rio–São Paulo axis.</span></div><div class="st"><span class="pt">BI · importadora de carros de luxo</span><span class="en">BI · luxury car importer</span></div></div>
           <div class="eff"><b><span class="pt">2 pessoas · 1–2 semanas</span><span class="en">2 people · 1–2 wk</span></b><span class="pt">sem IA</span><span class="en">without AI</span></div>
         </summary>
         <div class="four">
@@ -293,12 +325,12 @@ footer{color:var(--muted);font-size:13px;padding:28px 0 48px}
       <details class="case">
         <summary>
           <div class="rank">6</div>
-          <div><h3><span class="pt">App de estudo gamificado e personalizado</span><span class="en">Personalized, gamified study app</span></h3><div class="meta"><span class="pt">EdTech · uso familiar</span><span class="en">EdTech · family use</span></div></div>
+          <div><h3><span class="pt">App de estudo personalizado e gamificado</span><span class="en">Personalized, gamified study app</span></h3><div class="meta"><span class="pt">5 matérias, cada uma ligada à data da prova, com progresso salvo.</span><span class="en">5 subjects, each tied to its exam date, with saved progress.</span></div><div class="st"><span class="pt">Protótipo de EdTech</span><span class="en">EdTech prototype</span></div></div>
           <div class="eff"><b><span class="pt">3 pessoas · 3–4 semanas</span><span class="en">3 people · 3–4 wk</span></b><span class="pt">sem IA</span><span class="en">without AI</span></div>
         </summary>
         <div class="four">
-          <div><div class="label"><span class="pt">Dor</span><span class="en">Pain</span></div><p><span class="pt">Uma aluna do 7º ano com 5 provas em 9 dias, precisando de foco e de vontade de estudar.</span><span class="en">A 7th grader with 5 exams in 9 days who needed focus and motivation.</span></p></div>
-          <div><div class="label"><span class="pt">IA</span><span class="en">AI</span></div><p><span class="pt">Apps HTML de arquivo único mapeados na apostila: roteiro em blocos de 20 min, cartões, quiz, caderno digital, leitura em voz alta e álbum de figurinhas com os temas que ela gosta.</span><span class="en">Single-file HTML apps mapped to the textbook: 20-minute study blocks, flashcards, quizzes, a digital notebook, read-aloud and a sticker album themed on her interests.</span></p></div>
+          <div><div class="label"><span class="pt">Dor</span><span class="en">Pain</span></div><p><span class="pt">Estudante do ensino fundamental com 5 provas em 9 dias e dificuldade de foco. Material genérico não prendia a atenção.</span><span class="en">A middle-school student with 5 exams in 9 days and trouble focusing. Generic material did not hold attention.</span></p></div>
+          <div><div class="label"><span class="pt">IA</span><span class="en">AI</span></div><p><span class="pt">Apps HTML de arquivo único mapeados na apostila: roteiro em blocos de 20 min, cartões, quiz, caderno digital, leitura em voz alta e álbum de figurinhas com temas do interesse do aluno.</span><span class="en">Single-file HTML apps mapped to the textbook: 20-minute study blocks, flashcards, quizzes, a digital notebook, read-aloud and a sticker album themed on the student's interests.</span></p></div>
           <div><div class="label"><span class="pt">Resultado</span><span class="en">Output</span></div><p><span class="pt">Uma central e 5 matérias, cada uma ligada à data da prova, com progresso salvo.</span><span class="en">A hub and 5 subjects, each tied to its exam date, with saved progress.</span></p></div>
           <div class="noai"><div class="label"><span class="pt">Sem IA</span><span class="en">Without AI</span></div><p class="assume"><span class="pt">Pedagogo, dev front-end e ilustrador por 3 a 4 semanas por rodada de provas.</span><span class="en">Educator, front-end dev and illustrator for 3–4 weeks per exam round.</span></p></div>
         </div>
@@ -307,7 +339,7 @@ footer{color:var(--muted);font-size:13px;padding:28px 0 48px}
       <details class="case">
         <summary>
           <div class="rank">7</div>
-          <div><h3><span class="pt">Agente de diagnóstico empresarial</span><span class="en">Business diagnostic agent</span></h3><div class="meta"><span class="pt">Consultoria estratégica · protótipo</span><span class="en">Strategy consulting · prototype</span></div></div>
+          <div><h3><span class="pt">Agente de diagnóstico empresarial</span><span class="en">Business diagnostic agent</span></h3><div class="meta"><span class="pt">Marca baixa confiança em vez de inventar números.</span><span class="en">Flags low confidence instead of inventing numbers.</span></div><div class="st"><span class="pt">Consultoria estratégica · protótipo</span><span class="en">Strategy consulting · prototype</span></div></div>
           <div class="eff"><b><span class="pt">3–4 consultores · 4–6 sem.</span><span class="en">3–4 consultants · 4–6 wk</span></b><span class="pt">sem IA</span><span class="en">without AI</span></div>
         </summary>
         <div class="four">
@@ -341,10 +373,14 @@ footer{color:var(--muted);font-size:13px;padding:28px 0 48px}
     <div class="cta">
       <div>
         <h2><span class="pt">Vamos conversar?</span><span class="en">Let's talk</span></h2>
-        <p><span class="pt">Posso mostrar qualquer uma dessas entregas ao vivo.</span><span class="en">Happy to demo any of these live.</span></p>
+        <p><span class="pt">Procura alguém que leve a IA do slide para o CRM? Mostro qualquer um destes sistemas funcionando em 20 minutos.</span><span class="en">Looking for someone who takes AI from the slide deck into the CRM? I'll demo any of these systems live in 20 minutes.</span></p>
+        <span class="mail"><a href="mailto:guzflavio@gmail.com">guzflavio@gmail.com</a> · <a href="https://github.com/guzflavio-spec" rel="noopener">GitHub</a></span>
       </div>
-      <!-- Para adicionar LinkedIn ou e-mail, copie a linha abaixo e troque o href. -->
-      <a class="btn" href="https://github.com/guzflavio-spec" rel="noopener">GitHub</a>
+      <div class="btns">
+        <a class="btn" href="https://www.linkedin.com/in/flavio-guzm%C3%A1n/" rel="noopener" target="_blank">LinkedIn</a>
+        <a class="btn" href="mailto:guzflavio@gmail.com"><span class="pt">E-mail</span><span class="en">Email</span></a>
+        <a class="btn ghost" href="cv.pdf" download="CV_Flavio_Guzman.pdf"><span class="pt">Baixar CV</span><span class="en">Download CV</span></a>
+      </div>
     </div>
     <footer><span class="pt">Atualizado em novembro de 2026.</span><span class="en">Updated November 2026.</span></footer>
   </div>
