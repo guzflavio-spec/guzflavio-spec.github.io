@@ -3,10 +3,10 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Flavio Guzmán · Portfólio de IA</title>
-<meta name="description" content="Flavio Guzmán — Marketing &amp; CX leader building AI systems that sell: CRM copilots, multi-agent marketing and data products.">
-<meta property="og:title" content="Flavio Guzmán · IA aplicada a marketing e vendas">
-<meta property="og:description" content="Sistemas de IA em produção no funil de vendas: a dor, a solução, o resultado e quanto custaria sem IA. AI systems that sell.">
+<title>Flavio Guzmán · Portfólio executivo</title>
+<meta name="description" content="Portfólio executivo de Flavio Guzmán: 15+ anos liderando Marketing, Produto, CX e PR no automotivo premium (Lotus, MG, GWM, Mercedes-Benz, Honda) e IA aplicada a vendas.">
+<meta property="og:title" content="Flavio Guzmán · Portfólio executivo">
+<meta property="og:description" content="15+ anos no automotivo premium, orçamentos de até R$130 mi, reporte ao CEO e IA em produção no funil de vendas. Executive portfolio: marketing, CX and applied AI.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://guzflavio-spec.github.io/">
 <meta property="og:image" content="https://guzflavio-spec.github.io/og.png">
@@ -69,8 +69,56 @@ h1{font-family:Fraunces,Georgia,serif;font-weight:650;font-size:clamp(34px,6vw,5
 .kpi b{display:block;font-family:Fraunces,Georgia,serif;font-size:32px;line-height:1.1;font-weight:650}
 .kpi small{color:var(--muted);font-size:14px;line-height:1.4;display:block;margin-top:4px}
 
+
+/* nav */
+.nav{display:none;gap:18px}
+.nav a{color:var(--muted);text-decoration:none;font:500 14px Inter,sans-serif}
+.nav a:hover{color:var(--ink)}
+@media (min-width:960px){.nav{display:flex}}
+/* hero v3 */
+.hero-grid{display:grid;grid-template-columns:1fr;gap:28px;align-items:start}
+@media (min-width:960px){.hero-grid{grid-template-columns:1.25fr 1fr;gap:40px}}
+.hero .lede{font-size:clamp(16px,1.9vw,18px)}
+.hero .btns{margin-top:22px}
+.btn.dark{background:var(--ink);color:var(--bg)}
+.btn.line{background:var(--surface);color:var(--ink);border:1px solid var(--line)}
+.glance{background:var(--surface);border:1px solid var(--line);border-radius:18px;box-shadow:var(--shadow);padding:6px 20px}
+.glance h2{font:700 12px Inter,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin:14px 0 4px}
+.glance dl{margin:0}
+.glance .row{display:grid;grid-template-columns:96px 1fr;gap:12px;padding:11px 0;border-top:1px solid var(--line);font-size:14.5px;line-height:1.45}
+.glance .row:first-child{border-top:0}
+.glance dt{font:700 11.5px Inter,sans-serif;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);padding-top:2px}
+.glance dd{margin:0}
+.glance .ai dd b{color:var(--accent)}
+/* highlights */
+.hl{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+@media (min-width:860px){.hl{grid-template-columns:repeat(4,1fr)}}
+.hl > div{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:18px;box-shadow:var(--shadow);display:flex;flex-direction:column}
+.hl b{font-family:Fraunces,Georgia,serif;font-size:clamp(24px,3vw,32px);line-height:1.1;font-weight:650}
+.hl p{margin:6px 0 10px;font-size:14px;color:var(--ink);line-height:1.4}
+.hl small{margin-top:auto;font-size:12.5px;color:var(--muted)}
+.hl .ai{background:var(--accent-soft);border-color:transparent}
+.hl .ai small{color:var(--accent);font-weight:600}
+.featured-kpis{margin:0 0 24px}
+/* timeline */
+.tl{list-style:none;margin:0;padding:0;border-left:2px solid var(--line);max-width:860px}
+.tl li{position:relative;padding:0 0 26px 22px}
+.tl li::before{content:"";position:absolute;left:-7px;top:6px;width:12px;height:12px;border-radius:50%;background:var(--surface);border:2px solid var(--accent)}
+.tl .when{font:600 13px Inter,sans-serif;color:var(--muted)}
+.tl h3{margin:2px 0 2px;font-size:18px;line-height:1.3}
+.tl h3 span.co{color:var(--accent)}
+.tl p{margin:4px 0 0;font-size:15px}
+.tl .scope{color:var(--muted);font-size:14px}
+.tl li.early h3{font-size:16px}
+/* profile */
+.profile{display:grid;grid-template-columns:1fr;gap:16px}
+@media (min-width:720px){.profile{grid-template-columns:repeat(3,1fr)}}
+.profile ul{margin:6px 0 0;padding-left:18px;font-size:14.5px}
+.profile li{margin:4px 0}
+.profile li small{color:var(--muted)}
+
 /* section */
-section{padding:40px 0}
+section{padding:40px 0;scroll-margin-top:56px}
 h2{font-family:Fraunces,Georgia,serif;font-weight:650;font-size:clamp(26px,3.6vw,36px);margin:0 0 8px;letter-spacing:-.01em}
 .sub{color:var(--muted);margin:0 0 28px;max-width:720px}
 
@@ -178,7 +226,14 @@ footer{color:var(--muted);font-size:13px;padding:28px 0 48px}
 
 <div class="bar">
   <div class="wrap">
-    <div class="brand">Flavio Guzmán <span><span class="pt">· Portfólio de IA</span><span class="en">· AI Portfolio</span></span></div>
+    <div class="brand">Flavio Guzmán <span><span class="pt">· Portfólio executivo</span><span class="en">· Executive portfolio</span></span></div>
+    <nav class="nav" aria-label="Seções">
+      <a href="#highlights"><span class="pt">Destaques</span><span class="en">Highlights</span></a>
+      <a href="#featured"><span class="pt">IA aplicada</span><span class="en">Applied AI</span></a>
+      <a href="#career"><span class="pt">Trajetória</span><span class="en">Career</span></a>
+      <a href="#media"><span class="pt">Mídia</span><span class="en">Media</span></a>
+      <a href="#profile"><span class="pt">Idiomas</span><span class="en">Languages</span></a>
+    </nav>
     <div class="bar-right">
     <a class="hdr-cta" href="#contact"><span class="pt">Contato</span><span class="en">Contact</span></a>
     <div class="toggle" role="group" aria-label="Idioma / Language">
@@ -190,27 +245,59 @@ footer{color:var(--muted);font-size:13px;padding:28px 0 48px}
 </div>
 
 <header class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <div class="eyebrow"><span class="pt">Portfólio executivo</span><span class="en">Executive portfolio</span></div>
+      <div class="who" style="margin-top:16px"><img class="avatar" src="foto.jpg" width="72" height="72" alt="Flavio Guzmán"><div><b>Flavio Guzmán</b><span class="r"><span class="pt">Executivo de Marketing, Produto, CX e PR · São Paulo</span><span class="en">Marketing, Product, CX &amp; PR executive · São Paulo</span></span></div></div>
+      <h1><span class="pt">Construo marcas que vendem. Agora, com IA no funil.</span><span class="en">I build brands that sell. Now with AI in the funnel.</span></h1>
+      <p class="lede"><span class="pt">Mais de 15 anos no automotivo premium, no Brasil e na América Latina, em Mercedes-Benz, Honda, GWM, MG e Lotus. Liderei entradas de marca com orçamento de até R$130 milhões, reportando ao CEO. Como Head de Go-to-Market da GWM, a chegada ao Brasil somou cerca de 8 mil carros e mais de R$2 bilhões em vendas em 5 meses. Em 2026 levei a IA para dentro do CRM: um copiloto de vendas em Salesforce e Claude que segue em uso.</span><span class="en">15+ years in premium automotive across Brazil and Latin America, at Mercedes-Benz, Honda, GWM, MG and Lotus. I have led brand entries with budgets of up to R$130M, reporting to the CEO. As GWM's Head of Go-to-Market, the Brazil launch reached about 8,000 cars and R$2B+ in sales in 5 months. In 2026 I brought AI into the CRM: a sales copilot on Salesforce and Claude that is still in use.</span></p>
+      <div class="btns">
+        <a class="btn dark" href="cv.pdf" download="CV_Flavio_Guzman.pdf"><span class="pt">Baixar CV</span><span class="en">Download CV</span></a>
+        <a class="btn line" href="https://www.linkedin.com/in/flavio-guzm%C3%A1n/" rel="noopener" target="_blank">LinkedIn</a>
+        <a class="btn line" href="#featured"><span class="pt">Ver o caso de IA</span><span class="en">See the AI case</span> ↓</a>
+      </div>
+    </div>
+    <aside class="glance" aria-label="Em resumo">
+      <h2><span class="pt">Em resumo</span><span class="en">At a glance</span></h2>
+      <dl>
+        <div class="row"><dt><span class="pt">Gestão</span><span class="en">Scope</span></dt><dd><span class="pt">Orçamentos de até R$130 mi · reporte ao CEO · 3 agências · rede de 70+ grupos de concessionárias</span><span class="en">Budgets up to R$130M · reporting to the CEO · 3 agencies · network of 70+ dealer groups</span></dd></div>
+        <div class="row"><dt><span class="pt">Marcas</span><span class="en">Brands</span></dt><dd>Lotus · MG · GWM (Haval, Ora, Wey) · Mercedes-Benz <span class="pt">e</span><span class="en">&amp;</span> AMG · Honda</dd></div>
+        <div class="row"><dt><span class="pt">Áreas</span><span class="en">Functions</span></dt><dd><span class="pt">Marketing, Produto, Marca, CRM, CX e PR</span><span class="en">Marketing, Product, Brand, CRM, CX and PR</span></dd></div>
+        <div class="row ai"><dt><span class="pt">IA</span><span class="en">AI</span></dt><dd><span class="pt"><b>22,3%</b> de conversão sem desconto e resposta em <b>&lt;5 min</b> com CRM e IA (2026)</span><span class="en"><b>22.3%</b> conversion with no discounting and <b>&lt;5 min</b> response with CRM and AI (2026)</span></dd></div>
+        <div class="row"><dt><span class="pt">Idiomas</span><span class="en">Languages</span></dt><dd><span class="pt">Português nativo · Inglês fluente · Espanhol avançado</span><span class="en">Portuguese (native) · English (fluent) · Spanish (advanced)</span></dd></div>
+        <div class="row"><dt><span class="pt">Mídia</span><span class="en">Media</span></dt><dd><span class="pt">Porta-voz em TV e imprensa · 1º show de drones num lançamento automotivo</span><span class="en">Spokesperson on TV and in the press · first drone show at a car launch</span></dd></div>
+      </dl>
+    </aside>
+  </div>
+</header>
+
+<section id="highlights">
   <div class="wrap">
-    <div class="who"><img class="avatar" src="foto.jpg" width="72" height="72" alt="Flavio Guzmán"><div><b>Flavio Guzmán</b><span class="r"><span class="pt">Head de Marketing, CX e PR</span><span class="en">Head of Marketing, CX &amp; PR</span></span></div></div>
-    <div class="eyebrow"><span class="pt">Marketing, CX e IA aplicada</span><span class="en">Marketing, CX and applied AI</span></div>
-    <h1><span class="pt">Eu construo sistemas de IA que vendem.</span><span class="en">I build AI systems that sell.</span></h1>
-    <p class="lede">
-      <span class="pt">Lidero Marketing e CX e coloco IA para trabalhar no funil. Um dos meus sistemas diz a cada vendedor de uma importadora de luxo quem chamar hoje e o que dizer, e está em produção no Salesforce. Cada caso abaixo mostra a dor, a solução, o resultado e quanto custaria sem IA.</span>
-      <span class="en">I lead Marketing and CX and put AI to work across the funnel. One of my systems tells every salesperson at a luxury car importer who to call today and what to say, live in Salesforce. Each case below shows the pain, the solution, the result and what it would cost without AI.</span>
-    </p>
-    <div class="kpis">
-      <div class="kpi"><b>22,3%</b><small><span class="pt">de conversão em leads de alto valor, sem desconto no preço</span><span class="en">conversion on high-ticket leads, with no price discounting</span></small></div>
+    <h2><span class="pt">Destaques da carreira</span><span class="en">Career highlights</span></h2>
+    <p class="sub"><span class="pt">Resultados de marca, mercado e IA, com a empresa e o período de cada um.</span><span class="en">Brand, market and AI results, each with its company and period.</span></p>
+    <div class="hl">
+      <div><b>R$2 bi+</b><p><span class="pt">em vendas e ~8 mil carros nos 5 primeiros meses da marca no Brasil</span><span class="en">in sales and ~8,000 cars in the brand's first 5 months in Brazil</span></p><small>GWM · Go-to-Market</small></div>
+      <div><b><span class="pt">1º lugar</span><span class="en">#1</span></b><p><span class="pt">em SUVs híbridos já no primeiro mês de vendas</span><span class="en">in hybrid SUVs in the very first month of sales</span></p><small>GWM · Go-to-Market</small></div>
+      <div><b>16</b><p><span class="pt">prêmios de imprensa em 5 meses</span><span class="en">press awards in 5 months</span></p><small>GWM · Go-to-Market</small></div>
+      <div><b>R$33,6 mi</b><p><span class="pt">em mídia espontânea, com 600+ matérias positivas</span><span class="en">in earned media, with 600+ positive articles</span></p><small>MG Motor · 2025</small></div>
+      <div><b><span class="pt">1º</span><span class="en">First</span></b><p><span class="pt">show de drones num lançamento automotivo, no rooftop do Teatro Santander</span><span class="en">drone show at a car launch, on the Teatro Santander rooftop</span></p><small>MG Motor · 11/11/2025</small></div>
+      <div><b>R$5 mi</b><p><span class="pt">em mídia espontânea no lançamento da marca</span><span class="en">in earned media at the brand launch</span></p><small>Lotus · 2026</small></div>
+      <div class="ai"><b>22,3%</b><p><span class="pt">de conversão em leads de alto valor, sem desconto no preço</span><span class="en">conversion on high-ticket leads, with no price discounting</span></p><small><span class="pt">IA + CRM · jan–ago 2026</span><span class="en">AI + CRM · Jan–Aug 2026</span></small></div>
+      <div class="ai"><b>&lt;5 min</b><p><span class="pt">até a primeira resposta ao cliente</span><span class="en">to first customer response</span></p><small><span class="pt">IA + CRM · jan–ago 2026</span><span class="en">AI + CRM · Jan–Aug 2026</span></small></div>
+    </div>
+  </div>
+</section>
+
+<section id="featured">
+  <div class="wrap">
+    <h2><span class="pt">IA aplicada: principais conquistas</span><span class="en">Applied AI: key achievements</span></h2>
+    <p class="sub"><span class="pt">Sistemas que construí com IA e coloquei no funil de vendas. Cada caso mostra a dor, a solução, o resultado e quanto custaria sem IA. O principal: um copiloto que diz a cada vendedor quem chamar hoje, por que e com qual mensagem.</span><span class="en">Systems I built with AI and put into the sales funnel. Each case shows the pain, the solution, the result and what it would cost without AI. The flagship: a copilot that tells every salesperson who to call today, why, and with which message.</span></p>
+    <div class="kpis featured-kpis">
+      <div class="kpi"><b>22,3%</b><small><span class="pt">de conversão em leads de alto valor, sem desconto (jan–ago 2026)</span><span class="en">conversion on high-ticket leads, no discounting (Jan–Aug 2026)</span></small></div>
       <div class="kpi"><b>&lt;5 min</b><small><span class="pt">até a primeira resposta ao cliente, com CRM e IA</span><span class="en">to first customer response, with CRM and AI</span></small></div>
       <div class="kpi"><b><span class="pt">7 dígitos</span><span class="en">7 figures</span></b><small><span class="pt">de risco financeiro achado por auditoria automática</span><span class="en">in financial exposure found by an automated audit</span></small></div>
       <div class="kpi"><b>~60</b><small><span class="pt">pessoas-mês estimadas para fazer o mesmo sem IA*</span><span class="en">estimated person-months to do the same without AI*</span></small></div>
     </div>
-  </div>
-</header>
-
-<section id="featured">
-  <div class="wrap">
-    <h2><span class="pt">O caso principal</span><span class="en">The flagship case</span></h2>
-    <p class="sub"><span class="pt">Um copiloto que entrega a cada vendedor quem chamar hoje, por que e com qual mensagem.</span><span class="en">A copilot that tells every salesperson who to call today, why, and with which message.</span></p>
 
     <article class="feature">
       <div class="feature-head">
@@ -263,7 +350,7 @@ footer{color:var(--muted);font-size:13px;padding:28px 0 48px}
         </div>
         <div>
           <div class="label"><span class="pt">3 · Resultado</span><span class="en">3 · Output</span></div>
-          <p><span class="pt">Implantado para todo o time. Conversão de 22,3% em leads de alto valor sem desconto no preço e primeira resposta em menos de 5 minutos. Cada vendedor abre o dia com a lista priorizada, o perfil do cliente, o argumento de mercado e a mensagem pronta. Uma auditoria automática de pedidos achou um risco financeiro de sete dígitos em sinais sem confirmação e conflitos de alocação de carro, e propôs as regras de validação.</span><span class="en">Rolled out to the whole team. 22.3% conversion on high-ticket leads with no discounting, and first response in under 5 minutes. Every rep starts the day with a prioritized list, the buyer's profile, the market angle and a ready message. An automated order audit surfaced a seven-figure exposure in unconfirmed deposits plus car-allocation conflicts, and proposed the validation rules.</span></p>
+          <p><span class="pt">Implantado para todo o time. No período de janeiro a agosto de 2026, com o CRM completo (jornadas, lead score, MEDDIC e o copiloto), a conversão em leads de alto valor foi de 22,3% sem desconto no preço, com primeira resposta em menos de 5 minutos. Cada vendedor abre o dia com a lista priorizada, o perfil do cliente, o argumento de mercado e a mensagem pronta. Uma auditoria automática de pedidos achou um risco financeiro de sete dígitos em sinais sem confirmação e conflitos de alocação de carro, e propôs as regras de validação.</span><span class="en">Rolled out to the whole team. From January to August 2026, with the full CRM in place (journeys, lead scoring, MEDDIC and the copilot), high-ticket lead conversion was 22.3% with no discounting, with first response in under 5 minutes. Every rep starts the day with a prioritized list, the buyer's profile, the market angle and a ready message. An automated order audit surfaced a seven-figure exposure in unconfirmed deposits plus car-allocation conflicts, and proposed the validation rules.</span></p>
         </div>
         <div class="noai">
           <div class="label"><span class="pt">4 · Sem IA (estimativa)</span><span class="en">4 · Without AI (estimate)</span></div>
@@ -276,7 +363,7 @@ footer{color:var(--muted);font-size:13px;padding:28px 0 48px}
       <p class="shots-h"><span class="pt">Telas reais do sistema · nomes, marcas e valores trocados ou ocultos</span><span class="en">Real screens from the system · names, brands and values replaced or hidden</span></p>
       <figure><a href="tela-simulacao.jpg" target="_blank" rel="noopener"><img src="tela-simulacao.jpg" width="1400" height="455" loading="lazy" alt="Guia do vendedor: simulação do lead do cadastro à venda"></a><figcaption><span class="pt">Guia do vendedor: o lead do cadastro à venda, com a regra de temperatura que prioriza o dia.</span><span class="en">Rep guide: a lead from entry to sale, with the temperature rule that sets the day's priorities.</span></figcaption></figure>
       <figure><a href="tela-disc.jpg" target="_blank" rel="noopener"><img src="tela-disc.jpg" width="1400" height="524" loading="lazy" alt="Abordagem por perfil DISC"></a><figcaption><span class="pt">Abordagem por perfil DISC, inferida do que o vendedor registra no Salesforce.</span><span class="en">DISC-based approach, inferred from what the rep logs in Salesforce.</span></figcaption></figure>
-      <figure><a href="tela-bi.jpg" target="_blank" rel="noopener"><img src="tela-bi.jpg" width="1400" height="515" loading="lazy" alt="BI: leads e conversão por mídia"></a><figcaption><span class="pt">BI: o site trazia 40% dos leads, mas virava oportunidade só 1,1% das vezes. Eventos convertiam 25%. A leitura apontou a prioridade: acelerar o primeiro contato do lead digital e ampliar eventos.</span><span class="en">BI: the website brought 40% of leads but only 1.1% became opportunities, while events converted 25%. The read set the priority: speed up first contact on digital leads and do more events.</span></figcaption></figure>
+      <figure><a href="tela-bi.jpg" target="_blank" rel="noopener"><img src="tela-bi.jpg" width="1400" height="515" loading="lazy" alt="BI: leads e conversão por mídia"></a><figcaption><span class="pt">BI, painel de 12/08/2026: o site trazia 40% dos leads, mas virava oportunidade só 1,1% das vezes. Eventos convertiam 25%. A leitura apontou a prioridade: acelerar o primeiro contato do lead digital e ampliar eventos.</span><span class="en">BI, snapshot of 12 Aug 2026: the website brought 40% of leads but only 1.1% became opportunities, while events converted 25%. The read set the priority: speed up first contact on digital leads and do more events.</span></figcaption></figure>
     </div>
   </div>
 </section>
@@ -390,6 +477,30 @@ footer{color:var(--muted);font-size:13px;padding:28px 0 48px}
   </div>
 </section>
 
+<section id="career">
+  <div class="wrap">
+    <h2><span class="pt">Trajetória</span><span class="en">Career</span></h2>
+    <p class="sub"><span class="pt">Cada função com o escopo que eu tinha e o que mudou sob minha gestão.</span><span class="en">Each role with the scope I held and what changed under my leadership.</span></p>
+    <ol class="tl">
+      <li><div class="when"><span class="pt">jan–ago 2026</span><span class="en">Jan–Aug 2026</span></div><h3><span class="pt">Head de Marketing, CX e PR</span><span class="en">Head of Marketing, CX &amp; PR</span> · <span class="co">Lotus Cars <span class="pt">Brasil</span><span class="en">Brazil</span></span></h3>
+        <p class="scope"><span class="pt">Montei as áreas do zero, com reporte ao CEO e gestão de 3 agências.</span><span class="en">Built the functions from scratch, reporting to the CEO and managing 3 agencies.</span></p>
+        <p><span class="pt">Lançamento com ~R$5 mi em mídia espontânea. CRM no Salesforce com jornadas de WhatsApp, lead score, MEDDIC e copiloto de IA: 22,3% de conversão sem desconto e resposta em menos de 5 minutos. Eventos VIP, track days, porta-voz e gestão de crise.</span><span class="en">Launch with ~R$5M in earned media. Salesforce CRM with WhatsApp journeys, lead scoring, MEDDIC and an AI copilot: 22.3% conversion with no discounting and response in under 5 minutes. VIP events, track days, spokesperson and crisis comms.</span></p></li>
+      <li><div class="when"><span class="pt">out–dez 2025</span><span class="en">Oct–Dec 2025</span></div><h3><span class="pt">Head de Marketing, Produto, Marca, CRM e PR</span><span class="en">Head of Marketing, Product, Brand, CRM &amp; PR</span> · <span class="co">MG Motor <span class="pt">Brasil</span><span class="en">Brazil</span></span></h3>
+        <p class="scope"><span class="pt">Orçamento anual de R$50 mi.</span><span class="en">R$50M annual budget.</span></p>
+        <p><span class="pt">Lançamento da marca no Brasil com o primeiro show de drones num lançamento automotivo. 600+ matérias positivas e R$33,6 mi em mídia espontânea. Plano de go-to-market da linha premium IM e estande no Salão do Automóvel de São Paulo.</span><span class="en">Brand launch in Brazil with the first drone show at a car launch. 600+ positive articles and R$33.6M in earned media. Go-to-market plan for the premium IM line and the São Paulo Motor Show stand.</span></p></li>
+      <li><div class="when"><span class="pt">mai 2024 – out 2025</span><span class="en">May 2024 – Oct 2025</span></div><h3>Brand Manager Haval, Ora <span class="pt">e</span><span class="en">&amp;</span> Wey · <span class="co">GWM <span class="pt">Brasil</span><span class="en">Brazil</span></span></h3>
+        <p><span class="pt">Estratégia 360° das três marcas junto a mais de 70 grupos de concessionárias.</span><span class="en">360° strategy for the three brands across 70+ dealer groups.</span></p></li>
+      <li><div class="when"><span class="pt">set 2022 – mai 2024</span><span class="en">Sep 2022 – May 2024</span></div><h3><span class="pt">Head de Go-to-Market</span><span class="en">Head of Go-to-Market</span> · <span class="co">GWM <span class="pt">Brasil</span><span class="en">Brazil</span></span></h3>
+        <p class="scope"><span class="pt">Entrada da marca no Brasil, com orçamento de R$130 mi.</span><span class="en">Brand entry into Brazil, with a R$130M budget.</span></p>
+        <p><span class="pt">Liderança em SUVs híbridos já no primeiro mês, 16 prêmios de imprensa e cerca de 8 mil carros e R$2 bi+ em vendas brutas em 5 meses.</span><span class="en">Leadership in hybrid SUVs in month one, 16 press awards, and about 8,000 cars and R$2B+ in gross sales in 5 months.</span></p></li>
+      <li><div class="when">2012 – 2022</div><h3><span class="pt">Marketing de Produto, Preço e Mercados</span><span class="en">Product Marketing, Pricing &amp; Markets</span> · <span class="co">Mercedes-Benz Cars &amp; Vans <span class="pt">Brasil</span><span class="en">Brazil</span></span></h3>
+        <p><span class="pt">Dez anos em quatro funções: Market Manager para América Latina e Caribe; carros de passeio, com a introdução de híbridos e elétricos; HUB regional LATAM; e marketing de produto e preço de AMG GT, GLC, Classe G, Classe C, SL e EQC, com o configurador online e o Mercedes me connect.</span><span class="en">Ten years across four roles: Market Manager for Latin America and the Caribbean; passenger cars, introducing hybrids and EVs; the regional LATAM hub; and product marketing and pricing for AMG GT, GLC, G-Class, C-Class, SL and EQC, plus the online configurator and Mercedes me connect.</span></p></li>
+      <li class="early"><div class="when">2006 – 2012</div><h3>Honda · Izzo · Embraer</h3>
+        <p class="scope"><span class="pt">Vendas e planejamento regional na Honda, com interface com as fábricas do Japão, México e EUA e gestão de P&amp;L. Antes, gerente de vendas na Izzo e analista de importação na Embraer.</span><span class="en">Regional sales and planning at Honda, working with plants in Japan, Mexico and the US and managing P&amp;L. Before that, sales manager at Izzo and import analyst at Embraer.</span></p></li>
+    </ol>
+  </div>
+</section>
+
 <section id="media">
   <div class="wrap">
     <h2><span class="pt">Porta-voz de marca</span><span class="en">Brand spokesperson</span></h2>
@@ -405,12 +516,30 @@ footer{color:var(--muted);font-size:13px;padding:28px 0 48px}
   </div>
 </section>
 
+<section id="profile">
+  <div class="wrap">
+    <h2><span class="pt">Idiomas, formação e certificações</span><span class="en">Languages, education and certifications</span></h2>
+    <div class="profile">
+      <div class="card"><h4><span class="pt">Idiomas</span><span class="en">Languages</span></h4><ul>
+        <li><span class="pt">Português <small>· nativo</small></span><span class="en">Portuguese <small>· native</small></span></li>
+        <li><span class="pt">Inglês <small>· fluente, nível executivo (estudos em Dublin, 2007–08)</small></span><span class="en">English <small>· fluent, executive level (studied in Dublin, 2007–08)</small></span></li>
+        <li><span class="pt">Espanhol <small>· avançado, para negócios</small></span><span class="en">Spanish <small>· advanced, business</small></span></li></ul></div>
+      <div class="card"><h4><span class="pt">Formação</span><span class="en">Education</span></h4><ul>
+        <li><span class="pt">Administração, ênfase em Comércio Exterior <small>· UNIP</small></span><span class="en">BBA, Foreign Trade <small>· UNIP</small></span></li>
+        <li><span class="pt">MBA em Comunicação e Marketing <small>· Estácio (trancado)</small></span><span class="en">MBA in Communication and Marketing <small>· Estácio (on hold)</small></span></li></ul></div>
+      <div class="card"><h4><span class="pt">Certificações</span><span class="en">Certifications</span></h4><ul>
+        <li>Certified AMG Product Expert</li>
+        <li><span class="pt">Embaixador AMG Project ONE <small>· Alemanha, Áustria, Espanha, EUA e Croácia</small></span><span class="en">AMG Project ONE Ambassador <small>· Germany, Austria, Spain, USA and Croatia</small></span></li></ul></div>
+    </div>
+  </div>
+</section>
+
 <section id="contact">
   <div class="wrap">
     <div class="cta">
       <div>
         <h2><span class="pt">Vamos conversar?</span><span class="en">Let's talk</span></h2>
-        <p><span class="pt">Procura alguém que leve a IA do slide para o CRM? Mostro qualquer um destes sistemas funcionando em 20 minutos.</span><span class="en">Looking for someone who takes AI from the slide deck into the CRM? I'll demo any of these systems live in 20 minutes.</span></p>
+        <p><span class="pt">Procura um executivo de marketing que leve a IA do slide para o CRM? Mostro qualquer um destes sistemas funcionando em 20 minutos.</span><span class="en">Looking for a marketing executive who takes AI from the slide deck into the CRM? I'll demo any of these systems live in 20 minutes.</span></p>
         <span class="mail"><a href="mailto:guzflavio@gmail.com">guzflavio@gmail.com</a> · <a href="https://github.com/guzflavio-spec" rel="noopener">GitHub</a></span>
       </div>
       <div class="btns">
