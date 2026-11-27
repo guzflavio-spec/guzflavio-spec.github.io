@@ -74,6 +74,11 @@ section{padding:40px 0}
 h2{font-family:Fraunces,Georgia,serif;font-weight:650;font-size:clamp(26px,3.6vw,36px);margin:0 0 8px;letter-spacing:-.01em}
 .sub{color:var(--muted);margin:0 0 28px;max-width:720px}
 
+.media{display:grid;grid-template-columns:1fr 1fr;gap:12px;max-width:760px}
+.media figure{margin:0;background:var(--surface);border:1px solid var(--line);border-radius:14px;overflow:hidden;box-shadow:var(--shadow)}
+.media img{display:block;width:100%;height:auto;aspect-ratio:4/5;object-fit:cover;object-position:62% 40%}
+.media figcaption{padding:10px 12px;font-size:14px;color:var(--muted);line-height:1.4}
+
 /* featured */
 .feature{background:var(--surface);border:1px solid var(--line);border-radius:20px;box-shadow:var(--shadow);overflow:hidden}
 .feature-head{padding:28px 24px 8px}
@@ -364,6 +369,17 @@ footer{color:var(--muted);font-size:13px;padding:28px 0 48px}
     </div>
     <div class="stack" aria-label="Stack">
       <span>Claude · Claude Code</span><span>Salesforce · Agentforce</span><span>Journey Builder</span><span>LangGraph</span><span>Python</span><span>Apps Script</span><span>React · HTML</span><span>ElevenLabs</span><span>MCP</span><span>DISC · MEDDICC</span>
+    </div>
+  </div>
+</section>
+
+<section id="media">
+  <div class="wrap">
+    <h2><span class="pt">Porta-voz de marca</span><span class="en">Brand spokesperson</span></h2>
+    <p class="sub"><span class="pt">Além de construir os sistemas, falo pela marca em TV, imprensa e lançamentos. Fui anunciado pelo BlogAuto como gerente das marcas Haval e Ora na GWM Brasil.</span><span class="en">Beyond building the systems, I speak for the brand on TV, in the press and at launches. BlogAuto announced me as brand manager for Haval and Ora at GWM Brazil.</span></p>
+    <div class="media">
+      <figure><img src="midia-tv-1.jpg" width="720" height="900" loading="lazy" alt="Entrevista de TV ao lado do MG Cyberster"><figcaption><span class="pt">Entrevista de TV ao lado do MG Cyberster</span><span class="en">TV interview beside the MG Cyberster</span></figcaption></figure>
+      <figure><img src="midia-tv-2.jpg" width="720" height="900" loading="lazy" alt="Entrevista de TV no estande da MG"><figcaption><span class="pt">Entrevista de TV no estande da MG em salão do automóvel</span><span class="en">TV interview at the MG stand at an auto show</span></figcaption></figure>
     </div>
   </div>
 </section>
