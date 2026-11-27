@@ -82,6 +82,11 @@ h2{font-family:Fraunces,Georgia,serif;font-weight:650;font-size:clamp(26px,3.6vw
 .press a{color:var(--accent);font-weight:600}
 .media figcaption{padding:10px 12px;font-size:14px;color:var(--muted);line-height:1.4}
 
+.shots{margin-top:20px;display:grid;gap:16px}
+.shots-h{margin:0;font-size:14px;color:var(--muted)}
+.shots figure{margin:0;background:var(--surface);border:1px solid var(--line);border-radius:14px;overflow:hidden;box-shadow:var(--shadow)}
+.shots img{display:block;width:100%;height:auto}
+.shots figcaption{padding:10px 14px;font-size:14px;color:var(--muted);line-height:1.45}
 /* featured */
 .feature{background:var(--surface);border:1px solid var(--line);border-radius:20px;box-shadow:var(--shadow);overflow:hidden}
 .feature-head{padding:28px 24px 8px}
@@ -251,6 +256,9 @@ footer{color:var(--muted);font-size:13px;padding:28px 0 48px}
             <li><span class="pt">Lead score nativo de 0 a 100 (Perfil, MEDDICC, Engajamento) e 30+ fluxos e automações</span><span class="en">Native 0–100 lead score (Fit, MEDDICC, Engagement) and 30+ flows and automations</span></li>
             <li><span class="pt">Orquestrador de ~12 habilidades com arquitetura em LangGraph e portão de qualidade</span><span class="en">Orchestrator over ~12 skills with a LangGraph blueprint and a quality gate</span></li>
             <li><span class="pt">Painel diário criptografado (AES-GCM) gerado por tarefa agendada</span><span class="en">Daily encrypted (AES-GCM) board snapshot built by a scheduled job</span></li>
+            <li><span class="pt">Guia por vendedor: o lead do cadastro à venda em 10 etapas, campo a campo, com temperatura, jornada de e-mails, abordagem DISC, textos por canal e cenários de desistência</span><span class="en">Per-rep guide: a lead from entry to sale in 10 stages, field by field, with temperature scoring, the email journey, DISC approach, channel scripts and drop-out scenarios</span></li>
+            <li><span class="pt">Cockpit de CRM com 7 visões (funil, produtividade, consultor de CRM, índice de escassez de mercado, construtor de visões e NPS) e placar diário de execução por vendedor</span><span class="en">CRM cockpit with 7 views (funnel, productivity, CRM advisor, market scarcity index, view builder and NPS) plus a daily execution scoreboard per rep</span></li>
+            <li><span class="pt">BI comercial e de marketing: conversão por mídia, déficit contra o plano e share de mercado por região</span><span class="en">Sales and marketing BI: conversion by media source, gap to plan and market share by region</span></li>
           </ul>
         </div>
         <div>
@@ -264,6 +272,12 @@ footer{color:var(--muted);font-size:13px;padding:28px 0 48px}
         </div>
       </div>
     </article>
+    <div class="shots">
+      <p class="shots-h"><span class="pt">Telas reais do sistema · nomes, marcas e valores trocados ou ocultos</span><span class="en">Real screens from the system · names, brands and values replaced or hidden</span></p>
+      <figure><a href="tela-simulacao.jpg" target="_blank" rel="noopener"><img src="tela-simulacao.jpg" width="1400" height="455" loading="lazy" alt="Guia do vendedor: simulação do lead do cadastro à venda"></a><figcaption><span class="pt">Guia do vendedor: o lead do cadastro à venda, com a regra de temperatura que prioriza o dia.</span><span class="en">Rep guide: a lead from entry to sale, with the temperature rule that sets the day's priorities.</span></figcaption></figure>
+      <figure><a href="tela-disc.jpg" target="_blank" rel="noopener"><img src="tela-disc.jpg" width="1400" height="524" loading="lazy" alt="Abordagem por perfil DISC"></a><figcaption><span class="pt">Abordagem por perfil DISC, inferida do que o vendedor registra no Salesforce.</span><span class="en">DISC-based approach, inferred from what the rep logs in Salesforce.</span></figcaption></figure>
+      <figure><a href="tela-bi.jpg" target="_blank" rel="noopener"><img src="tela-bi.jpg" width="1400" height="515" loading="lazy" alt="BI: leads e conversão por mídia"></a><figcaption><span class="pt">BI: o site trazia 40% dos leads, mas virava oportunidade só 1,1% das vezes. Eventos convertiam 25%. A leitura apontou a prioridade: acelerar o primeiro contato do lead digital e ampliar eventos.</span><span class="en">BI: the website brought 40% of leads but only 1.1% became opportunities, while events converted 25%. The read set the priority: speed up first contact on digital leads and do more events.</span></figcaption></figure>
+    </div>
   </div>
 </section>
 
@@ -386,7 +400,7 @@ footer{color:var(--muted);font-size:13px;padding:28px 0 48px}
     </div>
     <ul class="press">
       <li><a href="https://globoplay.globo.com/v/13047491" target="_blank" rel="noopener"><span class="pt">Assista: AutoEsporte, TV Globo · “Eletrificados” (6 min)</span><span class="en">Watch: AutoEsporte, TV Globo · “Eletrificados” (6 min, Portuguese)</span> ↗</a></li>
-      <li><span class="pt">Fui o primeiro a usar drones durante um lançamento na indústria automotiva.</span><span class="en">I was the first to use drones during a launch in the automotive industry.</span> <a href="https://photos.app.goo.gl/VxCebm4Z6ERrKqx98" target="_blank" rel="noopener"><span class="pt">Veja o vídeo</span><span class="en">Watch the video</span> ↗</a></li>
+      <li><span class="pt">Lançamento da MG Motor no Brasil, em 11/11/2025: o primeiro show de drones num lançamento automotivo, no rooftop do Teatro Santander. Eu era diretor de Marketing, Produto, CRM, CX e PR.</span><span class="en">MG Motor brand launch in Brazil, 11 Nov 2025: the first drone show at an automotive launch, on the rooftop of Teatro Santander. I was Director of Marketing, Product, CRM, CX and PR.</span> <a href="https://photos.app.goo.gl/VxCebm4Z6ERrKqx98" target="_blank" rel="noopener"><span class="pt">Veja o vídeo</span><span class="en">Watch the video</span> ↗</a></li>
     </ul>
   </div>
 </section>
